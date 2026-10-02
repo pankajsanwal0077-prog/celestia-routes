@@ -9,13 +9,16 @@
         .header { background: #0b3c5d; color: white; padding: 20px; text-align: center; }
         .container { padding: 20px; max-width: 800px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-top: 20px; }
         .price { color: #d9534f; font-size: 24px; font-weight: bold; }
-        .btn { display: inline-block; padding: 12px 20px; margin: 10px 5px; text-decoration: none; color: white; border-radius: 5px; font-weight: bold; }
+        .btn { display: inline-block; padding: 12px 20px; margin: 8px 4px; text-decoration: none; color: white; border-radius: 5px; font-weight: bold; text-align: center; }
         .btn-call { background: #007bff; }
         .btn-wa { background: #25d366; }
+        .btn-email { background: #ea4335; }
         .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; }
-        .form-group input { width: 100%; padding: 10px; box-sizing: border-box; }
-        .submit-btn { width: 100%; background: #28a745; color: white; padding: 12px; border: none; font-size: 16px; cursor: pointer; border-radius: 5px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        .submit-btn { width: 100%; background: #28a745; color: white; padding: 12px; border: none; font-size: 16px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+        .button-group { text-align: center; margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; }
+        ul li { font-size: 16px; line-height: 1.6; margin-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -28,17 +31,19 @@
 <div class="container">
     <h2>Shimla & Manali 5 Nights / 6 Days Tour</h2>
     <p class="price">Special Offer: ₹8,999/- Per Person</p>
+
+    <!-- Updated Package Highlights -->
+    <h3>Package Inclusions:</h3>
     <ul>
-        <li>3-Star Hotel Accommodations</li>
-        <li>Daily Breakfast & Dinner (MAP Plan)</li>
+        <li>Hotel Accommodations</li>
+        <li>Dinner & Breakfast (MAP Plan)</li>
         <li>Dedicated Private Cab Transfers</li>
         <li>Sightseeing: Kufri, Solang Valley, Mall Road & More</li>
     </ul>
 
     <h3>Get Instant Quote</h3>
-    <!-- Form Action via Web3Forms/Formspree -->
     <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Replace with your Access Key -->
+        <!-- Access Key -->
         <input type="hidden" name="access_key" value="8b63b8c2-97e3-4766-afe0-b9e9bf6a09b4">
         
         <div class="form-group">
@@ -50,15 +55,20 @@
             <input type="tel" name="phone" required placeholder="Enter mobile number">
         </div>
         <div class="form-group">
+            <label>Email ID (Gmail):</label>
+            <input type="email" name="email" required placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
             <label>Travel Date:</label>
             <input type="date" name="travel_date" required>
         </div>
         <button type="submit" class="submit-btn">Book Free Callback</button>
     </form>
 
-    <div style="text-align: center; margin-top: 20px;">
+    <div class="button-group">
         <a href="tel:+917807425363" class="btn btn-call">📞 Direct Call Now</a>
         <a href="https://wa.me/917807425363?text=Hi%20Celestia%20Routes,%20I%20want%20details%20for%20Shimla%20Manali%20Package" class="btn btn-wa">💬 Chat on WhatsApp</a>
+        <a href="mailto:celestiaroutes@gmail.com?subject=Inquiry%20for%20Shimla%20Manali%20Tour%20Package" class="btn btn-email">✉️ Send Email</a>
     </div>
 </div>
 
