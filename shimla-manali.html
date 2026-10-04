@@ -9,18 +9,16 @@
         :root {
             --brand-navy: #0F2B48;
             --brand-gold: #C8922A;
-            --brand-gold-light: #FAF4E8;
             --green: #25D366;
         }
         body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #1e293b; }
         
-        /* Minimal Header (No Navigation Menu) */
         .lp-header { background: var(--brand-navy); padding: 15px 20px; text-align: center; }
         .lp-header img { height: 42px; }
 
-        /* Hero Section - Main Website Background Image Integrated */
+        /* Background image updated to SS2 layout */
         .hero-lp {
-            background: linear-gradient(rgba(15,43,72,0.82), rgba(15,43,72,0.85)), url('Image/hero-bg.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(15,43,72,0.65), rgba(15,43,72,0.8)), url('Image/hero-bg.jpg') center/cover no-repeat;
             color: #fff;
             padding: 50px 20px 70px;
             display: flex;
@@ -30,11 +28,10 @@
             gap: 30px;
         }
         .hero-text { max-width: 520px; }
-        .hero-text h1 { font-size: 30px; margin-bottom: 12px; color: #fff; line-height: 1.3; }
-        .hero-text p { font-size: 15px; color: #cbd5e1; line-height: 1.6; }
+        .hero-text h1 { font-size: 32px; margin-bottom: 12px; color: #fff; line-height: 1.3; }
+        .hero-text p { font-size: 15px; color: #f1f5f9; line-height: 1.6; }
         .price-badge { background: var(--brand-gold); color: #fff; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 13px; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
 
-        /* Quick Inquiry Form */
         .hero-form {
             background: #ffffff;
             padding: 28px 24px;
@@ -48,25 +45,22 @@
         }
         .hero-form h3 { margin: 0 0 5px 0; color: var(--brand-navy); font-size: 20px; text-align: center; }
         .hero-form p { text-align: center; font-size: 12px; color: #64748b; margin-bottom: 18px; }
-        .form-control { width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 14px; outline: none; }
+        .form-control { width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 14px; outline: none; background: #fff; }
         .form-control:focus { border-color: var(--brand-gold); }
         .btn-submit { width: 100%; background: var(--green); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: background 0.2s; }
         .btn-submit:hover { background: #1eb954; }
 
-        /* Highlights Section */
         .section-box { max-width: 900px; margin: -30px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
         .features-grid { background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
         .feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--brand-navy); }
         .feature-item span { color: var(--brand-gold); font-size: 18px; }
 
-        /* Itinerary Section */
         .itin-box { max-width: 800px; margin: 0 auto 100px; padding: 0 20px; }
         .itin-box h2 { text-align: center; color: var(--brand-navy); margin-bottom: 25px; }
         .day-card { background: #fff; padding: 18px; border-radius: 10px; margin-bottom: 12px; border-left: 4px solid var(--brand-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
         .day-card h4 { margin: 0 0 6px 0; color: var(--brand-navy); font-size: 16px; }
         .day-card p { margin: 0; font-size: 13px; color: #475569; }
 
-        /* Mobile Sticky Bottom Bar */
         .sticky-bar {
             position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff;
             border-top: 1px solid #e2e8f0; padding: 12px 20px; display: flex;
@@ -78,12 +72,10 @@
 </head>
 <body>
 
-    <!-- Minimal Header -->
     <header class="lp-header">
         <img src="Image/logo.png" alt="Celestia Routes">
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-lp">
         <div class="hero-text">
             <span class="price-badge">BEST SELLER • 6 DAYS / 5 NIGHTS</span>
@@ -98,12 +90,17 @@
                 <input type="text" id="lpName" placeholder="Your Full Name *" class="form-control" required>
                 <input type="tel" id="lpPhone" placeholder="WhatsApp Number *" class="form-control" required>
                 <input type="date" id="lpDate" class="form-control" required>
+                <select id="lpPersons" class="form-control" required>
+                    <option value="" disabled selected>No. of Travelers *</option>
+                    <option value="2 Persons (Couple/Friends)">2 Persons (Couple/Friends)</option>
+                    <option value="Family (3-5 Persons)">Family (3-5 Persons)</option>
+                    <option value="Group (6+ Persons)">Group (6+ Persons)</option>
+                </select>
                 <button type="submit" class="btn-submit">Get Price & Itinerary</button>
             </form>
         </div>
     </section>
 
-    <!-- Package Features Bar -->
     <div class="section-box">
         <div class="features-grid">
             <div class="feature-item"><span>✔</span> Pickup & Drop (Delhi/Chd)</div>
@@ -113,7 +110,6 @@
         </div>
     </div>
 
-    <!-- Short Day-Wise Itinerary -->
     <div class="itin-box">
         <h2>Trip Itinerary Summary</h2>
         <div class="day-card">
@@ -142,7 +138,6 @@
         </div>
     </div>
 
-    <!-- Mobile Sticky WhatsApp Action -->
     <div class="sticky-bar">
         <div>
             <span style="font-size: 11px; color: #64748b; display: block;">Shimla Manali 6D/5N</span>
@@ -157,12 +152,14 @@
             var name = document.getElementById('lpName').value;
             var phone = document.getElementById('lpPhone').value;
             var date = document.getElementById('lpDate').value;
+            var persons = document.getElementById('lpPersons').value;
             
             var msg = "Hello Celestia Routes!%0A%0A" +
                       "*Shimla Manali (6D/5N) Landing Page Inquiry*%0A" +
                       "• *Name:* " + name + "%0A" +
                       "• *WhatsApp:* " + phone + "%0A" +
-                      "• *Travel Date:* " + date;
+                      "• *Travel Date:* " + date + "%0A" +
+                      "• *Travelers:* " + persons;
 
             window.open("https://wa.me/916230413175?text=" + msg, "_blank");
         }
