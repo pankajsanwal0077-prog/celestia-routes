@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google Search SEO Meta Tags -->
-    <title>Celestia Routes | Himachal Tour Packages 2026</title>
-    <meta name="description" content="Explore Himachal, Spiti Valley, Ladakh, Kashmir & Uttarakhand with Celestia Routes. Tailor-made itineraries, verified homestays, and high-altitude adventures starting @ ₹9,999.">
-    <meta name="keywords" content="Celestia Routes, Himachal Tour Packages 2026, Shimla Manali Tour, Spiti Valley Trips, Ladakh Expeditions, Kullu Travel Agency">
+    <title>Celestia Routes | Himachal, Kashmir, Ladakh, Spiti & Goa Packages</title>
+    <meta name="description" content="Explore Himachal, Spiti Valley, Ladakh, Kashmir & Goa with Celestia Routes. Custom-crafted itineraries, verified stays, and memorable travel experiences.">
+    <meta name="keywords" content="Celestia Routes, Himachal Tour Packages, Kashmir Tour, Leh Ladakh Expedition, Spiti Valley Trips, Goa Packages">
+    
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Celestia Routes | Where Journeys Become Stories">
+    <meta property="og:description" content="Curating extraordinary journeys through Himachal, Kashmir, Ladakh, Spiti and Goa.">
+    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:url" content="https://celestiaroutes.in">
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom Modern Styling for Travel Tribes Style Layout -->
+    <!-- Modern Travel Tribes Style Layout CSS -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -23,20 +29,104 @@
             padding: 0;
         }
 
-        /* Filter Tabs */
-        .category-tabs {
+        /* Top Main Destinations Grid (Screenshot 1 Style) */
+        .dest-cards-container {
+            max-width: 1200px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .dest-hero-card {
+            position: relative;
+            height: 260px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dest-hero-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .dest-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .dest-tag {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.9);
+            color: #0f172a;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .dest-info h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 0 0 4px 0;
+            font-weight: 700;
+        }
+
+        .dest-info p {
+            color: #cbd5e1;
+            font-size: 12px;
+            margin: 0 0 6px 0;
+        }
+
+        .dest-price {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .dest-arrow {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            background: #ff5722;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Filter Pills Tabs */
+        .filter-tabs {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin: 30px auto 10px;
+            margin: 20px auto 30px;
             flex-wrap: wrap;
             padding: 0 15px;
         }
 
-        .tab-btn {
+        .filter-btn {
             background: #ffffff;
             border: 1px solid #cbd5e1;
-            padding: 10px 20px;
+            padding: 10px 22px;
             border-radius: 30px;
             font-size: 14px;
             font-weight: 600;
@@ -45,19 +135,19 @@
             transition: all 0.2s ease;
         }
 
-        .tab-btn.active, .tab-btn:hover {
+        .filter-btn.active, .filter-btn:hover {
             background: #0f172a;
             color: #ffffff;
             border-color: #0f172a;
         }
 
-        /* Package Grid Modern Upgrade */
+        /* Packages Grid (Screenshots 2-6 Style) */
         .pkg-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 25px;
             max-width: 1200px;
-            margin: 30px auto;
+            margin: 0 auto 50px;
             padding: 0 20px;
         }
 
@@ -65,54 +155,60 @@
             background: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
             display: flex;
             flex-direction: column;
+            border: 1px solid #f1f5f9;
         }
 
         .pkg-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 30px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
         }
 
-        .pkg-image-box {
+        .pkg-img-box {
             position: relative;
-            height: 210px;
-            overflow: hidden;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
         }
 
-        .pkg-image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .duration-badge {
+        .pkg-badges {
             position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(15, 23, 42, 0.85);
-            color: #ffffff;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 20px;
-            backdrop-filter: blur(4px);
+            top: 12px;
+            left: 12px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
         }
 
-        .tag-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #e11d48;
+        .badge-pill {
+            background: #ff5722;
             color: #ffffff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
-            padding: 4px 10px;
+            padding: 4px 8px;
             border-radius: 4px;
             text-transform: uppercase;
+        }
+
+        .badge-pill.white {
+            background: #ffffff;
+            color: #0f172a;
+        }
+
+        .pkg-duration {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(15, 23, 42, 0.8);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
         }
 
         .pkg-body {
@@ -125,106 +221,78 @@
         .pkg-title {
             font-size: 18px;
             font-weight: 700;
-            margin: 0 0 8px 0;
             color: #0f172a;
+            margin: 0 0 6px 0;
         }
 
-        .pkg-subtitle {
-            font-size: 13px;
-            color: #64748b;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        /* Inclusions List */
-        .pkg-inclusions {
-            display: flex;
-            gap: 12px;
+        .pkg-location {
             font-size: 12px;
-            color: #334155;
-            background: #f1f5f9;
-            padding: 10px 12px;
-            border-radius: 8px;
-            margin-bottom: 18px;
+            color: #ff5722;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
-        .inc-item {
+        .pkg-highlights {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .highlight-tag {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        .pkg-footer {
             display: flex;
             align-items: center;
-            gap: 4px;
-        }
-
-        /* Pricing Section */
-        .pkg-price-row {
-            display: flex;
-            align-items: baseline;
             justify-content: space-between;
             margin-top: auto;
-            padding-top: 10px;
+            padding-top: 12px;
             border-top: 1px dashed #e2e8f0;
         }
 
-        .old-price {
-            font-size: 13px;
-            color: #94a3b8;
-            text-decoration: line-through;
-        }
-
-        .final-price {
-            font-size: 20px;
-            font-weight: 800;
-            color: #059669;
-        }
-
-        .final-price span {
-            font-size: 11px;
+        .price-text {
+            font-size: 10px;
             color: #64748b;
-            font-weight: 400;
-        }
-
-        /* Card Action Buttons */
-        .btn-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .btn-itinerary {
-            background: #f1f5f9;
-            color: #0f172a;
-            border: none;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 13px;
+            text-transform: uppercase;
             font-weight: 600;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
         }
 
-        .btn-itinerary:hover {
-            background: #e2e8f0;
+        .price-val {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
         }
 
-        .btn-book {
-            background: #25D366;
+        .price-val span {
+            font-size: 11px;
+            font-weight: 400;
+            color: #64748b;
+        }
+
+        .view-btn {
+            background: #ff5722;
             color: #ffffff;
             border: none;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 13px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 700;
             cursor: pointer;
-            text-align: center;
-            text-decoration: none;
+            transition: background 0.2s;
         }
 
-        .btn-book:hover {
-            background: #1eb856;
+        .view-btn:hover {
+            background: #e64a19;
         }
 
-        /* Professional Rounded Close Button for Modal */
+        /* Modal Overlay Styling */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -247,6 +315,7 @@
             max-width: 400px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             position: relative;
+            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
         }
 
@@ -273,6 +342,41 @@
             color: #0f172a;
             transform: rotate(90deg);
         }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 13px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 6px;
+        }
     </style>
 </head>
 
@@ -282,14 +386,14 @@
         <div class="logo">
             <img src="Image/logo.png" alt="Celestia Routes Logo" style="height: 45px; vertical-align: middle;">
             <div style="display: inline-block; vertical-align: middle; margin-left: 12px;">
-                <span style="display: block; font-weight: bold; font-size: 20px;">Celestia Routes</span>
+                <span style="display: block; font-weight: bold; font-size: 20px; font-family: Arial, sans-serif;">Celestia Routes</span>
                 <span class="logo-tagline" style="display: block; font-family: 'Caveat', cursive; font-size: 18px; color: #555; margin-top: -3px;">Where journeys become stories</span>
             </div>
         </div>
         
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#packages">Packages</a></li>
+            <li><a href="#destinations">Destinations</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -297,178 +401,567 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p class="hero-tagline">EXPLORE • EXPERIENCE • CELEBRATE</p>
-            <h1>Himachal Tour Packages 2026</h1>
-            <p class="hero-subtitle">Handcrafted Himalayan Itineraries starting at just ₹9,999/-</p>
+            <p class="hero-tagline">TRAVEL • EXPLORE • EXPERIENCE</p>
+            <h1>Explore Beyond Horizons</h1>
+            <p class="hero-subtitle">Curating extraordinary journeys through Himachal, Kashmir, Ladakh, Spiti & Goa.</p>
             <div class="hero-buttons">
-                <a href="#packages" class="btn primary-btn">View All Packages</a>
-                <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn">Plan My Custom Trip</a>
+                <a href="#destinations" class="btn primary-btn">Explore Packages</a>
+                <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn">Plan My Trip</a>
             </div>
         </div>
     </section>
 
-    <!-- Category Filter Tabs -->
-    <section id="packages">
+    <!-- Main Active Destinations Section (Only 5 Working Destinations) -->
+    <section id="destinations">
         <div class="section-heading" style="text-align: center; margin-top: 40px;">
-            <h2>Top Recommended Itineraries</h2>
-            <p>Select your favorite travel category to explore curated packages</p>
+            <p class="small-title">POPULAR DESTINATIONS</p>
+            <h2>Choose Your Destination</h2>
+            <p>Click on any region to filter itineraries below</p>
         </div>
 
-        <div class="category-tabs">
-            <button class="tab-btn active" onclick="filterCategory('all')">All Packages</button>
-            <button class="tab-btn" onclick="filterCategory('shimla-manali')">Shimla & Manali</button>
-            <button class="tab-btn" onclick="filterCategory('spiti')">Spiti Valley</button>
-            <button class="tab-btn" onclick="filterCategory('ladakh')">Ladakh</button>
-            <button class="tab-btn" onclick="filterCategory('kashmir')">Jammu & Kashmir</button>
-        </div>
-
-        <!-- Package Grid -->
-        <div class="pkg-grid">
-            <!-- Package 1: Shimla Manali -->
-            <div class="pkg-card" data-category="shimla-manali">
-                <div class="pkg-image-box">
-                    <img src="Image/manali.jpg" alt="Shimla Manali Package">
-                    <span class="duration-badge">5 Nights / 6 Days</span>
-                    <span class="tag-badge">Best Seller</span>
-                </div>
-                <div class="pkg-body">
-                    <h3 class="pkg-title">Shimla & Manali Delights</h3>
-                    <p class="pkg-subtitle">Solang Valley, Mall Road, Atal Tunnel & Kullu River Rafting.</p>
-                    
-                    <div class="pkg-inclusions">
-                        <span class="inc-item">🏨 Hotel</span>
-                        <span class="inc-item">🍽️ Meals</span>
-                        <span class="inc-item">🚗 Cab</span>
-                        <span class="inc-item">🏔️ Sightseeing</span>
+        <div class="dest-cards-container">
+            <!-- Himachal Pradesh -->
+            <div class="dest-hero-card" style="background-image: url('Image/manali.jpg');" onclick="filterCategory('himachal')">
+                <div class="dest-card-overlay">
+                    <span class="dest-tag">HILL STATION</span>
+                    <div class="dest-info">
+                        <h3>Himachal Pradesh</h3>
+                        <p>6 packages</p>
+                        <div class="dest-price">from ₹9,999</div>
                     </div>
-
-                    <div class="pkg-price-row">
-                        <div>
-                            <div class="old-price">₹14,999</div>
-                            <div class="final-price">₹9,999 <span>/ person</span></div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button class="btn-itinerary" onclick="openInquiryForm('Shimla & Manali 5N/6D')">View Details</button>
-                        <button class="btn-book" onclick="openInquiryForm('Shimla & Manali 5N/6D')">Book Now</button>
-                    </div>
+                    <div class="dest-arrow">&rarr;</div>
                 </div>
             </div>
 
-            <!-- Package 2: Spiti Valley Circuit -->
-            <div class="pkg-card" data-category="spiti">
-                <div class="pkg-image-box">
-                    <img src="Image/chandratal.jpg" alt="Spiti Valley Package">
-                    <span class="duration-badge">7 Nights / 8 Days</span>
-                    <span class="tag-badge">Adventure</span>
-                </div>
-                <div class="pkg-body">
-                    <h3 class="pkg-title">Ultimate Spiti Expedition</h3>
-                    <p class="pkg-subtitle">Kaza, Chandratal Lake, Key Monastery, Hikkim & Langza.</p>
-                    
-                    <div class="pkg-inclusions">
-                        <span class="inc-item">🏨 Homestays</span>
-                        <span class="inc-item">🍽️ Meals</span>
-                        <span class="inc-item">🚙 4x4 SUV</span>
-                        <span class="inc-item">⛺ Camping</span>
+            <!-- Kashmir -->
+            <div class="dest-hero-card" style="background-image: url('Image/srinagar.jpg');" onclick="filterCategory('kashmir')">
+                <div class="dest-card-overlay">
+                    <span class="dest-tag">VALLEY</span>
+                    <div class="dest-info">
+                        <h3>Kashmir</h3>
+                        <p>6 packages</p>
+                        <div class="dest-price">from ₹14,999</div>
                     </div>
-
-                    <div class="pkg-price-row">
-                        <div>
-                            <div class="old-price">₹22,500</div>
-                            <div class="final-price">₹16,499 <span>/ person</span></div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button class="btn-itinerary" onclick="openInquiryForm('Spiti Circuit 7N/8D')">View Details</button>
-                        <button class="btn-book" onclick="openInquiryForm('Spiti Circuit 7N/8D')">Book Now</button>
-                    </div>
+                    <div class="dest-arrow">&rarr;</div>
                 </div>
             </div>
 
-            <!-- Package 3: Leh Ladakh Circuit -->
-            <div class="pkg-card" data-category="ladakh">
-                <div class="pkg-image-box">
-                    <img src="Image/pangong.jpg" alt="Ladakh Tour Package">
-                    <span class="duration-badge">6 Nights / 7 Days</span>
-                    <span class="tag-badge">Popular</span>
+            <!-- Leh Ladakh -->
+            <div class="dest-hero-card" style="background-image: url('Image/leh.jpg');" onclick="filterCategory('ladakh')">
+                <div class="dest-card-overlay">
+                    <span class="dest-tag">HIGH ALTITUDE</span>
+                    <div class="dest-info">
+                        <h3>Leh Ladakh</h3>
+                        <p>6 packages</p>
+                        <div class="dest-price">from ₹24,999</div>
+                    </div>
+                    <div class="dest-arrow">&rarr;</div>
                 </div>
-                <div class="pkg-body">
-                    <h3 class="pkg-title">Magical Ladakh & Pangong</h3>
-                    <p class="pkg-subtitle">Leh, Nubra Valley, Khardung La Pass & Pangong Tso Lake.</p>
-                    
-                    <div class="pkg-inclusions">
-                        <span class="inc-item">🏨 Hotel</span>
-                        <span class="inc-item">🍽️ Meals</span>
-                        <span class="inc-item">🚗 Transfer</span>
-                        <span class="inc-item">📜 Permit</span>
-                    </div>
+            </div>
 
-                    <div class="pkg-price-row">
-                        <div>
-                            <div class="old-price">₹26,000</div>
-                            <div class="final-price">₹18,999 <span>/ person</span></div>
-                        </div>
+            <!-- Spiti Valley -->
+            <div class="dest-hero-card" style="background-image: url('Image/chandratal.jpg');" onclick="filterCategory('spiti')">
+                <div class="dest-card-overlay">
+                    <span class="dest-tag">COLD DESERT</span>
+                    <div class="dest-info">
+                        <h3>Spiti Valley</h3>
+                        <p>6 packages</p>
+                        <div class="dest-price">from ₹18,999</div>
                     </div>
+                    <div class="dest-arrow">&rarr;</div>
+                </div>
+            </div>
 
-                    <div class="btn-group">
-                        <button class="btn-itinerary" onclick="openInquiryForm('Ladakh Package 6N/7D')">View Details</button>
-                        <button class="btn-book" onclick="openInquiryForm('Ladakh Package 6N/7D')">Book Now</button>
+            <!-- Goa -->
+            <div class="dest-hero-card" style="background-image: url('Image/jibhi.jpg');" onclick="filterCategory('goa')">
+                <div class="dest-card-overlay">
+                    <span class="dest-tag">BEACH</span>
+                    <div class="dest-info">
+                        <h3>Goa</h3>
+                        <p>5 packages</p>
+                        <div class="dest-price">from ₹8,999</div>
                     </div>
+                    <div class="dest-arrow">&rarr;</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer-section" id="contact" style="background: #0f172a; color: white; padding: 40px 20px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h3>Celestia Routes</h3>
-            <p>Near Kais Gompa / Kukdiser, Kais, Kullu, Himachal Pradesh – 175101</p>
-            <p>📞 +91 62304 13175 / +91 78074 25363 | ✉️ celestiaroutes@gmail.com</p>
-            <p style="margin-top: 20px; font-size: 13px; color: #94a3b8;">© 2026 Celestia Routes. All Rights Reserved.</p>
+    <!-- Interactive Filter Pills -->
+    <div class="filter-tabs" id="pkg-section">
+        <button class="filter-btn active" id="btn-all" onclick="filterCategory('all')">All Destinations</button>
+        <button class="filter-btn" id="btn-himachal" onclick="filterCategory('himachal')">Himachal Pradesh</button>
+        <button class="filter-btn" id="btn-kashmir" onclick="filterCategory('kashmir')">Kashmir</button>
+        <button class="filter-btn" id="btn-spiti" onclick="filterCategory('spiti')">Spiti Valley</button>
+        <button class="filter-btn" id="btn-ladakh" onclick="filterCategory('ladakh')">Leh Ladakh</button>
+        <button class="filter-btn" id="btn-goa" onclick="filterCategory('goa')">Goa</button>
+    </div>
+
+    <!-- Package Grid Container -->
+    <div class="pkg-grid">
+        
+        <!-- HIMACHAL PACKAGES (Screenshot 2) -->
+        <div class="pkg-card" data-category="himachal">
+            <div class="pkg-img-box" style="background-image: url('Image/manali.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">HIMACHAL</span>
+                    <span class="badge-pill white">FAMILY</span>
+                </div>
+                <span class="pkg-duration">⏱ 6D / 5N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Shimla Manali Delight</h3>
+                <div class="pkg-location">📍 Starts from Chandigarh / Delhi</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Mall Road evenings</span>
+                    <span class="highlight-tag">Atal Tunnel</span>
+                    <span class="highlight-tag">Solang adventure</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹16,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Shimla Manali Delight (6D/5N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="himachal">
+            <div class="pkg-img-box" style="background-image: url('Image/kasol.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">HIMACHAL</span>
+                    <span class="badge-pill white">ADVENTURE</span>
+                </div>
+                <span class="pkg-duration">⏱ 5D / 4N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Manali Adventure Escape</h3>
+                <div class="pkg-location">📍 Starts from Delhi</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Paragliding at Solang</span>
+                    <span class="highlight-tag">Sissu Lahaul</span>
+                    <span class="highlight-tag">Beas Rafting</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹13,499 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Manali Adventure Escape (5D/4N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="himachal">
+            <div class="pkg-img-box" style="background-image: url('Image/shimla.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">HIMACHAL</span>
+                    <span class="badge-pill white">WEEKEND</span>
+                </div>
+                <span class="pkg-duration">⏱ 4D / 3N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Shimla Kufri Chail Weekend</h3>
+                <div class="pkg-location">📍 Starts from Chandigarh</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Chail Palace</span>
+                    <span class="highlight-tag">Kufri viewpoints</span>
+                    <span class="highlight-tag">Toy train</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹9,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Shimla Kufri Weekend (4D/3N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- KASHMIR PACKAGES (Screenshot 3) -->
+        <div class="pkg-card" data-category="kashmir">
+            <div class="pkg-img-box" style="background-image: url('Image/srinagar.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">KASHMIR</span>
+                    <span class="badge-pill white">FAMILY</span>
+                </div>
+                <span class="pkg-duration">⏱ 6D / 5N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Kashmir Valley Classic</h3>
+                <div class="pkg-location">📍 Starts from Srinagar</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Houseboat night</span>
+                    <span class="highlight-tag">Gulmarg gondola</span>
+                    <span class="highlight-tag">Betaab Valley</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹21,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Kashmir Valley Classic (6D/5N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="kashmir">
+            <div class="pkg-img-box" style="background-image: url('Image/gulmarg.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">KASHMIR</span>
+                    <span class="badge-pill white">BUDGET</span>
+                </div>
+                <span class="pkg-duration">⏱ 5D / 4N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Srinagar Gulmarg Pahalgam</h3>
+                <div class="pkg-location">📍 Starts from Srinagar</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Saffron fields</span>
+                    <span class="highlight-tag">Aru Valley</span>
+                    <span class="highlight-tag">Gondola phase 1</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹17,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Srinagar Gulmarg Pahalgam (5D/4N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="kashmir">
+            <div class="pkg-img-box" style="background-image: url('Image/pahalgam.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">KASHMIR</span>
+                    <span class="badge-pill white">HONEYMOON</span>
+                </div>
+                <span class="pkg-duration">⏱ 6D / 5N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Kashmir Honeymoon Special</h3>
+                <div class="pkg-location">📍 Starts from Srinagar</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Deluxe houseboat</span>
+                    <span class="highlight-tag">Candle light dinner</span>
+                    <span class="highlight-tag">Doodhpathri picnic</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹26,500 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Kashmir Honeymoon Special (6D/5N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPITI VALLEY PACKAGES (Screenshot 4) -->
+        <div class="pkg-card" data-category="spiti">
+            <div class="pkg-img-box" style="background-image: url('Image/kaza.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">SPITI VALLEY</span>
+                    <span class="badge-pill white">WINTER</span>
+                </div>
+                <span class="pkg-duration">⏱ 8D / 7N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Spiti Winter Circuit</h3>
+                <div class="pkg-location">📍 Starts from Shimla</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Snow leopard belt</span>
+                    <span class="highlight-tag">Key Monastery</span>
+                    <span class="highlight-tag">Hikkim highest PO</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹27,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Spiti Winter Circuit (8D/7N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="spiti">
+            <div class="pkg-img-box" style="background-image: url('Image/chandratal.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">SPITI VALLEY</span>
+                    <span class="badge-pill white">EXPLORER</span>
+                </div>
+                <span class="pkg-duration">⏱ 9D / 8N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Spiti Full Circuit</h3>
+                <div class="pkg-location">📍 Starts from Shimla</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Shimla to Manali out</span>
+                    <span class="highlight-tag">Chandratal moon lake</span>
+                    <span class="highlight-tag">Kunzum La</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹29,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Spiti Full Circuit (9D/8N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="spiti">
+            <div class="pkg-img-box" style="background-image: url('Image/tabo.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">SPITI VALLEY</span>
+                    <span class="badge-pill white">WEEKEND</span>
+                </div>
+                <span class="pkg-duration">⏱ 6D / 5N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Kaza Chandratal Express</h3>
+                <div class="pkg-location">📍 Starts from Manali</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Chandratal camping</span>
+                    <span class="highlight-tag">Chicham bridge</span>
+                    <span class="highlight-tag">Langza fossils</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹21,500 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Kaza Chandratal Express (6D/5N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEH LADAKH PACKAGES (Screenshot 5) -->
+        <div class="pkg-card" data-category="ladakh">
+            <div class="pkg-img-box" style="background-image: url('Image/leh.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">LEH LADAKH</span>
+                    <span class="badge-pill white">FAMILY</span>
+                </div>
+                <span class="pkg-duration">⏱ 6D / 5N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Leh Ladakh Highlights</h3>
+                <div class="pkg-location">📍 Starts from Leh</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Khardung La pass</span>
+                    <span class="highlight-tag">Pangong lakeside camp</span>
+                    <span class="highlight-tag">Hunder sand dunes</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹24,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Leh Ladakh Highlights (6D/5N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="ladakh">
+            <div class="pkg-img-box" style="background-image: url('Image/pangong.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">LEH LADAKH</span>
+                    <span class="badge-pill white">EXPLORER</span>
+                </div>
+                <span class="pkg-duration">⏱ 7D / 6N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Nubra Pangong Circuit</h3>
+                <div class="pkg-location">📍 Starts from Leh</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Turtuk Balti village</span>
+                    <span class="highlight-tag">Alchi monastery</span>
+                    <span class="highlight-tag">Shyok river route</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹29,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Nubra Pangong Circuit (7D/6N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="ladakh">
+            <div class="pkg-img-box" style="background-image: url('Image/nubra.jpg');">
+                <div class="badge-pill" style="position: absolute; top: 12px; left: 12px;">LEH LADAKH</div>
+                <span class="pkg-duration">⏱ 9D / 8N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Manali to Leh Overland</h3>
+                <div class="pkg-location">📍 Starts from Manali</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Five high passes</span>
+                    <span class="highlight-tag">Gata Loops</span>
+                    <span class="highlight-tag">Sarchu camping</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹36,500 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Manali to Leh Overland (9D/8N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOA PACKAGES (Screenshot 6) -->
+        <div class="pkg-card" data-category="goa">
+            <div class="pkg-img-box" style="background-image: url('Image/jibhi.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">GOA</span>
+                    <span class="badge-pill white">BEACH</span>
+                </div>
+                <span class="pkg-duration">⏱ 4D / 3N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Goa Beach Getaway</h3>
+                <div class="pkg-location">📍 Starts from Goa</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Baga beach shacks</span>
+                    <span class="highlight-tag">Fort Aguada sunset</span>
+                    <span class="highlight-tag">Basilica of Bom Jesus</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹11,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Goa Beach Getaway (4D/3N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pkg-card" data-category="goa">
+            <div class="pkg-img-box" style="background-image: url('Image/kasol.jpg');">
+                <div class="pkg-badges">
+                    <span class="badge-pill">GOA</span>
+                    <span class="badge-pill white">FRIENDS</span>
+                </div>
+                <span class="pkg-duration">⏱ 3D / 2N</span>
+            </div>
+            <div class="pkg-body">
+                <h3 class="pkg-title">Goa Party Weekend</h3>
+                <div class="pkg-location">📍 Starts from Goa</div>
+                <div class="pkg-highlights">
+                    <span class="highlight-tag">Club entries included</span>
+                    <span class="highlight-tag">Parasailing & jet ski</span>
+                    <span class="highlight-tag">Anjuna sunset</span>
+                </div>
+                <div class="pkg-footer">
+                    <div>
+                        <div class="price-text">FROM</div>
+                        <div class="price-val">₹8,999 <span>per person</span></div>
+                    </div>
+                    <button class="view-btn" onclick="openInquiryForm('Goa Party Weekend (3D/2N)')">View More Details</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Registered Office & Footer Section -->
+    <footer class="footer-section" id="contact">
+        <div class="footer-container">
+            <div class="footer-offices">
+                <span class="footer-badge">REGISTERED OFFICE</span>
+                <h3>Get In Touch With Us</h3>
+                
+                <div class="office-main-card">
+                    <h4>Celestia Routes</h4>
+                    <p class="office-address">
+                        Near Kais Gompa / Kukdiser, Kais,<br>
+                        Tehsil & District Kullu, Himachal Pradesh – 175101, India
+                    </p>
+                    <div class="office-contacts-list">
+                        <p>📞 +91 62304 13175 / +91 78074 25363</p>
+                        <p>✉️ celestiaroutes@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div class="footer-social-box">
+                    <h3>Follow Our Trails</h3>
+                    <p class="social-subtitle">Join our community of mountain explorers and check out our daily expedition stories.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1ME4AEDmze/" target="_blank" class="social-icon" title="Facebook">f</a>
+                        <a href="https://www.instagram.com/celestia_routes" target="_blank" class="social-icon" title="Instagram">📷</a>
+                        <a href="https://x.com/CelestiaRoutes" target="_blank" class="social-icon" title="Twitter/X">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-quick-note">
+                    <h3>Ready for an Adventure?</h3>
+                    <p>Drop us a message anytime. Our local experts from Kullu are always here to design your custom itinerary.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Celestia Routes. All Rights Reserved. Crafted with passion.</p>
         </div>
     </footer>
 
-    <!-- Interactive Lead Form Modal -->
+    <!-- Floating WhatsApp Chat Widget -->
+    <a href="https://wa.me/916230413175" target="_blank" class="whatsapp-float">
+        <span>Need Help? <strong>Chat with us</strong></span>
+        <div class="whatsapp-icon">💬</div>
+    </a>
+
+    <!-- Interactive Landing Modal Form -->
     <div class="modal-overlay" id="inquiryModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeInquiryForm()" title="Close">&times;</span>
-            <h3 id="modalTitle" style="text-align: center; font-size: 20px; margin-bottom: 10px;">Plan Your Trip</h3>
-            <p style="text-align: center; font-size: 13px; color: #64748b; margin-bottom: 20px;">Fill in your details and our Kullu experts will contact you shortly.</p>
+            <h3 id="modalTitle">Plan Your Trip</h3>
+            <p style="text-align: center; font-size: 13px; color: #64748b; margin-bottom: 20px;">Fill in your details and our team will contact you shortly.</p>
             
             <form onsubmit="submitInquiry(event)">
                 <input type="hidden" id="selectedDestination" value="">
                 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px;">Your Name *</label>
-                    <input type="text" id="custName" placeholder="Enter your full name" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                <div class="form-group">
+                    <label for="custName">Your Name *</label>
+                    <input type="text" id="custName" placeholder="Enter your full name" required>
                 </div>
                 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px;">WhatsApp Number *</label>
-                    <input type="tel" id="custPhone" placeholder="Enter WhatsApp number" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                <div class="form-group">
+                    <label for="custPhone">WhatsApp Number *</label>
+                    <input type="tel" id="custPhone" placeholder="Enter WhatsApp number" required>
                 </div>
                 
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px;">Email ID *</label>
-                    <input type="email" id="custEmail" placeholder="Enter your email address" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                <div class="form-group">
+                    <label for="custEmail">Email ID *</label>
+                    <input type="email" id="custEmail" placeholder="Enter your email address" required>
                 </div>
 
-                <button type="submit" style="width: 100%; background: #25D366; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer;">Send Inquiry via WhatsApp</button>
+                <button type="submit" class="submit-btn">Send Inquiry via WhatsApp</button>
             </form>
         </div>
     </div>
 
-    <!-- Category Filter & Modal JS Script -->
+    <!-- Interactive Filtering & Modal Logic -->
     <script>
         function filterCategory(cat) {
-            var tabs = document.querySelectorAll('.tab-btn');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            event.target.classList.add('active');
+            // Update Active Pill Buttons
+            var buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
 
+            if(cat === 'all') document.getElementById('btn-all').classList.add('active');
+            else if(cat === 'himachal') document.getElementById('btn-himachal').classList.add('active');
+            else if(cat === 'kashmir') document.getElementById('btn-kashmir').classList.add('active');
+            else if(cat === 'spiti') document.getElementById('btn-spiti').classList.add('active');
+            else if(cat === 'ladakh') document.getElementById('btn-ladakh').classList.add('active');
+            else if(cat === 'goa') document.getElementById('btn-goa').classList.add('active');
+
+            // Show/Hide Package Cards
             var cards = document.querySelectorAll('.pkg-card');
             cards.forEach(card => {
                 if(cat === 'all' || card.getAttribute('data-category') === cat) {
@@ -477,6 +970,9 @@
                     card.style.display = 'none';
                 }
             });
+
+            // Smooth Scroll down to package cards if clicked from top
+            document.getElementById('pkg-section').scrollIntoView({ behavior: 'smooth' });
         }
 
         function openInquiryForm(destination) {
@@ -491,13 +987,14 @@
 
         function submitInquiry(e) {
             e.preventDefault();
+            
             var name = document.getElementById('custName').value;
             var phone = document.getElementById('custPhone').value;
             var email = document.getElementById('custEmail').value;
             var dest = document.getElementById('selectedDestination').value;
 
             var msg = "Hello Celestia Routes!%0A%0A" +
-                      "*New Package Inquiry*%0A" +
+                      "*New Travel Inquiry*%0A" +
                       "• *Package:* " + dest + "%0A" +
                       "• *Name:* " + name + "%0A" +
                       "• *WhatsApp:* " + phone + "%0A" +
@@ -505,6 +1002,13 @@
 
             window.open("https://wa.me/916230413175?text=" + msg, "_blank");
             closeInquiryForm();
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('inquiryModal');
+            if (event.target == modal) {
+                closeInquiryForm();
+            }
         }
     </script>
 </body>
