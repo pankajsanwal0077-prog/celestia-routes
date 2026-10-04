@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google Search SEO Meta Tags -->
-    <title>Celestia Routes | Himachal, Kashmir, Ladakh, Spiti & Goa Packages</title>
-    <meta name="description" content="Explore Himachal, Spiti Valley, Ladakh, Kashmir & Goa with Celestia Routes. Custom-crafted itineraries, verified stays, and memorable travel experiences.">
-    <meta name="keywords" content="Celestia Routes, Himachal Tour Packages, Kashmir Tour, Leh Ladakh Expedition, Spiti Valley Trips, Goa Packages">
+    <title>Celestia Routes | Himachal, Kashmir, Ladakh & Spiti Tour Packages</title>
+    <meta name="description" content="Explore Himachal, Spiti Valley, Ladakh & Kashmir with Celestia Routes. Custom-crafted itineraries, verified stays, and memorable travel experiences.">
+    <meta name="keywords" content="Celestia Routes, Himachal Tour Packages, Kashmir Tour, Leh Ladakh Expedition, Spiti Valley Trips">
     
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="Celestia Routes | Where Journeys Become Stories">
-    <meta property="og:description" content="Curating extraordinary journeys through Himachal, Kashmir, Ladakh, Spiti and Goa.">
+    <meta property="og:description" content="Curating extraordinary journeys through Himachal, Kashmir, Ladakh, and Spiti.">
     <meta property="og:image" content="Image/logo.png">
     <meta property="og:url" content="https://celestiaroutes.in">
 
@@ -29,13 +29,13 @@
             padding: 0;
         }
 
-        /* Top Main Destinations Grid (Screenshot 1 Style) */
+        /* Top Main Destinations Grid */
         .dest-cards-container {
             max-width: 1200px;
             margin: 40px auto 20px;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
         }
 
@@ -88,13 +88,7 @@
         .dest-info p {
             color: #cbd5e1;
             font-size: 12px;
-            margin: 0 0 6px 0;
-        }
-
-        .dest-price {
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 600;
+            margin: 0;
         }
 
         .dest-arrow {
@@ -141,7 +135,7 @@
             border-color: #0f172a;
         }
 
-        /* Packages Grid (Screenshots 2-6 Style) */
+        /* Packages Grid */
         .pkg-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -251,41 +245,24 @@
         .pkg-footer {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             margin-top: auto;
             padding-top: 12px;
             border-top: 1px dashed #e2e8f0;
-        }
-
-        .price-text {
-            font-size: 10px;
-            color: #64748b;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .price-val {
-            font-size: 18px;
-            font-weight: 800;
-            color: #0f172a;
-        }
-
-        .price-val span {
-            font-size: 11px;
-            font-weight: 400;
-            color: #64748b;
         }
 
         .view-btn {
             background: #ff5722;
             color: #ffffff;
             border: none;
-            padding: 10px 16px;
+            padding: 10px 20px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
             cursor: pointer;
             transition: background 0.2s;
+            width: 100%;
+            text-align: center;
         }
 
         .view-btn:hover {
@@ -403,7 +380,7 @@
         <div class="hero-content">
             <p class="hero-tagline">TRAVEL • EXPLORE • EXPERIENCE</p>
             <h1>Explore Beyond Horizons</h1>
-            <p class="hero-subtitle">Curating extraordinary journeys through Himachal, Kashmir, Ladakh, Spiti & Goa.</p>
+            <p class="hero-subtitle">Curating extraordinary journeys through Himachal, Kashmir, Ladakh & Spiti.</p>
             <div class="hero-buttons">
                 <a href="#destinations" class="btn primary-btn">Explore Packages</a>
                 <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn">Plan My Trip</a>
@@ -411,7 +388,7 @@
         </div>
     </section>
 
-    <!-- Main Active Destinations Section (Only 5 Working Destinations) -->
+    <!-- Main Active Destinations Section -->
     <section id="destinations">
         <div class="section-heading" style="text-align: center; margin-top: 40px;">
             <p class="small-title">POPULAR DESTINATIONS</p>
@@ -427,7 +404,6 @@
                     <div class="dest-info">
                         <h3>Himachal Pradesh</h3>
                         <p>6 packages</p>
-                        <div class="dest-price">from ₹9,999</div>
                     </div>
                     <div class="dest-arrow">&rarr;</div>
                 </div>
@@ -440,7 +416,6 @@
                     <div class="dest-info">
                         <h3>Kashmir</h3>
                         <p>6 packages</p>
-                        <div class="dest-price">from ₹14,999</div>
                     </div>
                     <div class="dest-arrow">&rarr;</div>
                 </div>
@@ -453,7 +428,6 @@
                     <div class="dest-info">
                         <h3>Leh Ladakh</h3>
                         <p>6 packages</p>
-                        <div class="dest-price">from ₹24,999</div>
                     </div>
                     <div class="dest-arrow">&rarr;</div>
                 </div>
@@ -466,20 +440,6 @@
                     <div class="dest-info">
                         <h3>Spiti Valley</h3>
                         <p>6 packages</p>
-                        <div class="dest-price">from ₹18,999</div>
-                    </div>
-                    <div class="dest-arrow">&rarr;</div>
-                </div>
-            </div>
-
-            <!-- Goa -->
-            <div class="dest-hero-card" style="background-image: url('Image/jibhi.jpg');" onclick="filterCategory('goa')">
-                <div class="dest-card-overlay">
-                    <span class="dest-tag">BEACH</span>
-                    <div class="dest-info">
-                        <h3>Goa</h3>
-                        <p>5 packages</p>
-                        <div class="dest-price">from ₹8,999</div>
                     </div>
                     <div class="dest-arrow">&rarr;</div>
                 </div>
@@ -494,13 +454,12 @@
         <button class="filter-btn" id="btn-kashmir" onclick="filterCategory('kashmir')">Kashmir</button>
         <button class="filter-btn" id="btn-spiti" onclick="filterCategory('spiti')">Spiti Valley</button>
         <button class="filter-btn" id="btn-ladakh" onclick="filterCategory('ladakh')">Leh Ladakh</button>
-        <button class="filter-btn" id="btn-goa" onclick="filterCategory('goa')">Goa</button>
     </div>
 
     <!-- Package Grid Container -->
     <div class="pkg-grid">
         
-        <!-- HIMACHAL PACKAGES (Screenshot 2) -->
+        <!-- HIMACHAL PACKAGES -->
         <div class="pkg-card" data-category="himachal">
             <div class="pkg-img-box" style="background-image: url('Image/manali.jpg');">
                 <div class="pkg-badges">
@@ -518,10 +477,6 @@
                     <span class="highlight-tag">Solang adventure</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹16,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Shimla Manali Delight (6D/5N)')">View More Details</button>
                 </div>
             </div>
@@ -544,10 +499,6 @@
                     <span class="highlight-tag">Beas Rafting</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹13,499 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Manali Adventure Escape (5D/4N)')">View More Details</button>
                 </div>
             </div>
@@ -570,16 +521,12 @@
                     <span class="highlight-tag">Toy train</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹9,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Shimla Kufri Weekend (4D/3N)')">View More Details</button>
                 </div>
             </div>
         </div>
 
-        <!-- KASHMIR PACKAGES (Screenshot 3) -->
+        <!-- KASHMIR PACKAGES -->
         <div class="pkg-card" data-category="kashmir">
             <div class="pkg-img-box" style="background-image: url('Image/srinagar.jpg');">
                 <div class="pkg-badges">
@@ -597,10 +544,6 @@
                     <span class="highlight-tag">Betaab Valley</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹21,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Kashmir Valley Classic (6D/5N)')">View More Details</button>
                 </div>
             </div>
@@ -623,10 +566,6 @@
                     <span class="highlight-tag">Gondola phase 1</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹17,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Srinagar Gulmarg Pahalgam (5D/4N)')">View More Details</button>
                 </div>
             </div>
@@ -649,16 +588,12 @@
                     <span class="highlight-tag">Doodhpathri picnic</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹26,500 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Kashmir Honeymoon Special (6D/5N)')">View More Details</button>
                 </div>
             </div>
         </div>
 
-        <!-- SPITI VALLEY PACKAGES (Screenshot 4) -->
+        <!-- SPITI VALLEY PACKAGES -->
         <div class="pkg-card" data-category="spiti">
             <div class="pkg-img-box" style="background-image: url('Image/kaza.jpg');">
                 <div class="pkg-badges">
@@ -676,10 +611,6 @@
                     <span class="highlight-tag">Hikkim highest PO</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹27,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Spiti Winter Circuit (8D/7N)')">View More Details</button>
                 </div>
             </div>
@@ -702,10 +633,6 @@
                     <span class="highlight-tag">Kunzum La</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹29,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Spiti Full Circuit (9D/8N)')">View More Details</button>
                 </div>
             </div>
@@ -728,16 +655,12 @@
                     <span class="highlight-tag">Langza fossils</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹21,500 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Kaza Chandratal Express (6D/5N)')">View More Details</button>
                 </div>
             </div>
         </div>
 
-        <!-- LEH LADAKH PACKAGES (Screenshot 5) -->
+        <!-- LEH LADAKH PACKAGES -->
         <div class="pkg-card" data-category="ladakh">
             <div class="pkg-img-box" style="background-image: url('Image/leh.jpg');">
                 <div class="pkg-badges">
@@ -755,10 +678,6 @@
                     <span class="highlight-tag">Hunder sand dunes</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹24,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Leh Ladakh Highlights (6D/5N)')">View More Details</button>
                 </div>
             </div>
@@ -781,10 +700,6 @@
                     <span class="highlight-tag">Shyok river route</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹29,999 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Nubra Pangong Circuit (7D/6N)')">View More Details</button>
                 </div>
             </div>
@@ -804,64 +719,7 @@
                     <span class="highlight-tag">Sarchu camping</span>
                 </div>
                 <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹36,500 <span>per person</span></div>
-                    </div>
                     <button class="view-btn" onclick="openInquiryForm('Manali to Leh Overland (9D/8N)')">View More Details</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- GOA PACKAGES (Screenshot 6) -->
-        <div class="pkg-card" data-category="goa">
-            <div class="pkg-img-box" style="background-image: url('Image/jibhi.jpg');">
-                <div class="pkg-badges">
-                    <span class="badge-pill">GOA</span>
-                    <span class="badge-pill white">BEACH</span>
-                </div>
-                <span class="pkg-duration">⏱ 4D / 3N</span>
-            </div>
-            <div class="pkg-body">
-                <h3 class="pkg-title">Goa Beach Getaway</h3>
-                <div class="pkg-location">📍 Starts from Goa</div>
-                <div class="pkg-highlights">
-                    <span class="highlight-tag">Baga beach shacks</span>
-                    <span class="highlight-tag">Fort Aguada sunset</span>
-                    <span class="highlight-tag">Basilica of Bom Jesus</span>
-                </div>
-                <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹11,999 <span>per person</span></div>
-                    </div>
-                    <button class="view-btn" onclick="openInquiryForm('Goa Beach Getaway (4D/3N)')">View More Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="pkg-card" data-category="goa">
-            <div class="pkg-img-box" style="background-image: url('Image/kasol.jpg');">
-                <div class="pkg-badges">
-                    <span class="badge-pill">GOA</span>
-                    <span class="badge-pill white">FRIENDS</span>
-                </div>
-                <span class="pkg-duration">⏱ 3D / 2N</span>
-            </div>
-            <div class="pkg-body">
-                <h3 class="pkg-title">Goa Party Weekend</h3>
-                <div class="pkg-location">📍 Starts from Goa</div>
-                <div class="pkg-highlights">
-                    <span class="highlight-tag">Club entries included</span>
-                    <span class="highlight-tag">Parasailing & jet ski</span>
-                    <span class="highlight-tag">Anjuna sunset</span>
-                </div>
-                <div class="pkg-footer">
-                    <div>
-                        <div class="price-text">FROM</div>
-                        <div class="price-val">₹8,999 <span>per person</span></div>
-                    </div>
-                    <button class="view-btn" onclick="openInquiryForm('Goa Party Weekend (3D/2N)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -959,7 +817,6 @@
             else if(cat === 'kashmir') document.getElementById('btn-kashmir').classList.add('active');
             else if(cat === 'spiti') document.getElementById('btn-spiti').classList.add('active');
             else if(cat === 'ladakh') document.getElementById('btn-ladakh').classList.add('active');
-            else if(cat === 'goa') document.getElementById('btn-goa').classList.add('active');
 
             // Show/Hide Package Cards
             var cards = document.querySelectorAll('.pkg-card');
@@ -971,7 +828,7 @@
                 }
             });
 
-            // Smooth Scroll down to package cards if clicked from top
+            // Smooth Scroll down to package cards
             document.getElementById('pkg-section').scrollIntoView({ behavior: 'smooth' });
         }
 
