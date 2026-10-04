@@ -261,6 +261,14 @@
             border: 1px solid rgba(200, 146, 42, 0.2);
         }
 
+        .highlight-tag.more-tag {
+            background: var(--brand-navy);
+            color: var(--brand-gold);
+            font-weight: 700;
+            border: 1px solid var(--brand-navy);
+            cursor: pointer;
+        }
+
         .pkg-footer {
             display: flex;
             align-items: center;
@@ -385,6 +393,31 @@
             cursor: pointer;
             margin-top: 6px;
         }
+
+        /* Floating WhatsApp Icon */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -406,7 +439,7 @@
         </ul>
     </nav>
 
-    <!-- Hero Section (Original Background Image Preserved) -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <p class="hero-tagline" style="color: var(--brand-gold); letter-spacing: 2px;">TRAVEL • EXPLORE • EXPERIENCE</p>
@@ -497,18 +530,19 @@
                     <span class="badge-pill">HIMACHAL</span>
                     <span class="badge-pill gold">FAMILY</span>
                 </div>
-                <span class="pkg-duration">⏱ 6D / 5N</span>
+                <span class="pkg-duration">⏱ 5N / 6D</span>
             </div>
             <div class="pkg-body">
-                <h3 class="pkg-title">Shimla Manali Delight</h3>
+                <h3 class="pkg-title">Magical Shimla & Manali</h3>
                 <div class="pkg-location">📍 Starts from Chandigarh / Delhi</div>
                 <div class="pkg-highlights">
                     <span class="highlight-tag">Mall Road evenings</span>
                     <span class="highlight-tag">Atal Tunnel</span>
                     <span class="highlight-tag">Solang adventure</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Shimla Manali Delight (6D/5N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Magical Shimla & Manali (5N/6D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -519,7 +553,7 @@
                     <span class="badge-pill">HIMACHAL</span>
                     <span class="badge-pill gold">ADVENTURE</span>
                 </div>
-                <span class="pkg-duration">⏱ 5D / 4N</span>
+                <span class="pkg-duration">⏱ 4N / 5D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Manali Adventure Escape</h3>
@@ -528,9 +562,10 @@
                     <span class="highlight-tag">Paragliding at Solang</span>
                     <span class="highlight-tag">Sissu Lahaul</span>
                     <span class="highlight-tag">Beas Rafting</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Manali Adventure Escape (5D/4N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Manali Adventure Escape (4N/5D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -541,7 +576,7 @@
                     <span class="badge-pill">HIMACHAL</span>
                     <span class="badge-pill gold">WEEKEND</span>
                 </div>
-                <span class="pkg-duration">⏱ 4D / 3N</span>
+                <span class="pkg-duration">⏱ 3N / 4D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Shimla Kufri Chail Weekend</h3>
@@ -550,9 +585,10 @@
                     <span class="highlight-tag">Chail Palace</span>
                     <span class="highlight-tag">Kufri viewpoints</span>
                     <span class="highlight-tag">Toy train</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Shimla Kufri Weekend (4D/3N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Shimla Kufri Weekend (3N/4D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -564,7 +600,7 @@
                     <span class="badge-pill">KASHMIR</span>
                     <span class="badge-pill gold">FAMILY</span>
                 </div>
-                <span class="pkg-duration">⏱ 6D / 5N</span>
+                <span class="pkg-duration">⏱ 5N / 6D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Kashmir Valley Classic</h3>
@@ -573,9 +609,10 @@
                     <span class="highlight-tag">Houseboat night</span>
                     <span class="highlight-tag">Gulmarg gondola</span>
                     <span class="highlight-tag">Betaab Valley</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Kashmir Valley Classic (6D/5N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Kashmir Valley Classic (5N/6D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -586,7 +623,7 @@
                     <span class="badge-pill">KASHMIR</span>
                     <span class="badge-pill gold">BUDGET</span>
                 </div>
-                <span class="pkg-duration">⏱ 5D / 4N</span>
+                <span class="pkg-duration">⏱ 4N / 5D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Srinagar Gulmarg Pahalgam</h3>
@@ -595,9 +632,10 @@
                     <span class="highlight-tag">Saffron fields</span>
                     <span class="highlight-tag">Aru Valley</span>
                     <span class="highlight-tag">Gondola phase 1</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Srinagar Gulmarg Pahalgam (5D/4N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Srinagar Gulmarg Pahalgam (4N/5D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -608,7 +646,7 @@
                     <span class="badge-pill">KASHMIR</span>
                     <span class="badge-pill gold">HONEYMOON</span>
                 </div>
-                <span class="pkg-duration">⏱ 6D / 5N</span>
+                <span class="pkg-duration">⏱ 5N / 6D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Kashmir Honeymoon Special</h3>
@@ -617,9 +655,10 @@
                     <span class="highlight-tag">Deluxe houseboat</span>
                     <span class="highlight-tag">Candle light dinner</span>
                     <span class="highlight-tag">Doodhpathri picnic</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Kashmir Honeymoon Special (6D/5N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Kashmir Honeymoon Special (5N/6D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -631,7 +670,7 @@
                     <span class="badge-pill">SPITI VALLEY</span>
                     <span class="badge-pill gold">WINTER</span>
                 </div>
-                <span class="pkg-duration">⏱ 8D / 7N</span>
+                <span class="pkg-duration">⏱ 7N / 8D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Spiti Winter Circuit</h3>
@@ -640,9 +679,10 @@
                     <span class="highlight-tag">Snow leopard belt</span>
                     <span class="highlight-tag">Key Monastery</span>
                     <span class="highlight-tag">Hikkim highest PO</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Spiti Winter Circuit (8D/7N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Spiti Winter Circuit (7N/8D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -653,7 +693,7 @@
                     <span class="badge-pill">SPITI VALLEY</span>
                     <span class="badge-pill gold">EXPLORER</span>
                 </div>
-                <span class="pkg-duration">⏱ 9D / 8N</span>
+                <span class="pkg-duration">⏱ 8N / 9D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Spiti Full Circuit</h3>
@@ -662,9 +702,10 @@
                     <span class="highlight-tag">Shimla to Manali out</span>
                     <span class="highlight-tag">Chandratal moon lake</span>
                     <span class="highlight-tag">Kunzum La</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Spiti Full Circuit (9D/8N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Spiti Full Circuit (8N/9D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -675,7 +716,7 @@
                     <span class="badge-pill">SPITI VALLEY</span>
                     <span class="badge-pill gold">WEEKEND</span>
                 </div>
-                <span class="pkg-duration">⏱ 6D / 5N</span>
+                <span class="pkg-duration">⏱ 5N / 6D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Kaza Chandratal Express</h3>
@@ -684,9 +725,10 @@
                     <span class="highlight-tag">Chandratal camping</span>
                     <span class="highlight-tag">Chicham bridge</span>
                     <span class="highlight-tag">Langza fossils</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Kaza Chandratal Express (6D/5N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Kaza Chandratal Express (5N/6D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -698,7 +740,7 @@
                     <span class="badge-pill">LEH LADAKH</span>
                     <span class="badge-pill gold">FAMILY</span>
                 </div>
-                <span class="pkg-duration">⏱ 6D / 5N</span>
+                <span class="pkg-duration">⏱ 5N / 6D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Leh Ladakh Highlights</h3>
@@ -707,9 +749,10 @@
                     <span class="highlight-tag">Khardung La pass</span>
                     <span class="highlight-tag">Pangong lakeside camp</span>
                     <span class="highlight-tag">Hunder sand dunes</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Leh Ladakh Highlights (6D/5N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Leh Ladakh Highlights (5N/6D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -720,7 +763,7 @@
                     <span class="badge-pill">LEH LADAKH</span>
                     <span class="badge-pill gold">EXPLORER</span>
                 </div>
-                <span class="pkg-duration">⏱ 7D / 6N</span>
+                <span class="pkg-duration">⏱ 6N / 7D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Nubra Pangong Circuit</h3>
@@ -729,9 +772,10 @@
                     <span class="highlight-tag">Turtuk Balti village</span>
                     <span class="highlight-tag">Alchi monastery</span>
                     <span class="highlight-tag">Shyok river route</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Nubra Pangong Circuit (7D/6N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Nubra Pangong Circuit (6N/7D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -739,7 +783,7 @@
         <div class="pkg-card" data-category="ladakh">
             <div class="pkg-img-box" style="background-image: url('Image/nubra.jpg');">
                 <div class="badge-pill" style="position: absolute; top: 12px; left: 12px;">LEH LADAKH</div>
-                <span class="pkg-duration">⏱ 9D / 8N</span>
+                <span class="pkg-duration">⏱ 8N / 9D</span>
             </div>
             <div class="pkg-body">
                 <h3 class="pkg-title">Manali to Leh Overland</h3>
@@ -748,9 +792,10 @@
                     <span class="highlight-tag">Five high passes</span>
                     <span class="highlight-tag">Gata Loops</span>
                     <span class="highlight-tag">Sarchu camping</span>
+                    <span class="highlight-tag more-tag">+More</span>
                 </div>
                 <div class="pkg-footer">
-                    <button class="view-btn" onclick="openInquiryForm('Manali to Leh Overland (9D/8N)')">View More Details</button>
+                    <button class="view-btn" onclick="openInquiryForm('Manali to Leh Overland (8N/9D)')">View More Details</button>
                 </div>
             </div>
         </div>
@@ -801,68 +846,72 @@
     </footer>
 
     <!-- Floating WhatsApp Chat Widget -->
-    <a href="https://wa.me/916230413175" target="_blank" class="whatsapp-float">
-        <span>Need Help? <strong>Chat with us</strong></span>
-        <div class="whatsapp-icon">💬</div>
+    <a href="https://wa.me/916230413175" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+        💬
     </a>
 
-    <!-- Interactive Landing Modal Form -->
-    <div class="modal-overlay" id="inquiryModal">
+    <!-- Inquiry Modal -->
+    <div id="inquiryModal" class="modal-overlay">
         <div class="modal-box">
-            <span class="close-btn" onclick="closeInquiryForm()" title="Close">&times;</span>
-            <h3 id="modalTitle" style="color: var(--brand-navy);">Plan Your Trip</h3>
-            <p style="text-align: center; font-size: 13px; color: #64748b; margin-bottom: 20px;">Fill in your details and our team will contact you shortly.</p>
+            <span class="close-btn" onclick="closeInquiryForm()">&times;</span>
+            <h3 style="margin-top: 0; color: var(--brand-navy);" id="modalTitle">Inquire Package</h3>
+            <p style="font-size: 13px; color: #64748b; margin-bottom: 20px;">Fill in your details to get custom quote & details on WhatsApp.</p>
             
-            <form onsubmit="submitInquiry(event)">
-                <input type="hidden" id="selectedDestination" value="">
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                <input type="hidden" id="selectedPackage" value="">
                 
                 <div class="form-group">
-                    <label for="custName">Your Name *</label>
-                    <input type="text" id="custName" placeholder="Enter your full name" required>
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your full name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="custPhone">WhatsApp Number *</label>
-                    <input type="tel" id="custPhone" placeholder="Enter WhatsApp number" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="custEmail">Email ID *</label>
-                    <input type="email" id="custEmail" placeholder="Enter your email address" required>
+                    <label for="travelDates">Approx. Travel Date</label>
+                    <input type="date" id="travelDates" required>
                 </div>
 
-                <button type="submit" class="submit-btn">Send Inquiry via WhatsApp</button>
+                <div class="form-group">
+                    <label for="travelersCount">Number of Travelers</label>
+                    <input type="number" id="travelersCount" min="1" placeholder="e.g. 2, 4, 8" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry on WhatsApp 📱</button>
             </form>
         </div>
     </div>
 
-    <!-- Interactive Filtering & Modal Logic -->
+    <!-- JavaScript Logic -->
     <script>
-        function filterCategory(cat) {
-            var buttons = document.querySelectorAll('.filter-btn');
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.pkg-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Toggle active state on filter buttons
             buttons.forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + category);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
 
-            if(cat === 'all') document.getElementById('btn-all').classList.add('active');
-            else if(cat === 'himachal') document.getElementById('btn-himachal').classList.add('active');
-            else if(cat === 'kashmir') document.getElementById('btn-kashmir').classList.add('active');
-            else if(cat === 'spiti') document.getElementById('btn-spiti').classList.add('active');
-            else if(cat === 'ladakh') document.getElementById('btn-ladakh').classList.add('active');
-
-            var cards = document.querySelectorAll('.pkg-card');
+            // Filter package cards
             cards.forEach(card => {
-                if(cat === 'all' || card.getAttribute('data-category') === cat) {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
 
-            document.getElementById('pkg-section').scrollIntoView({ behavior: 'smooth' });
+            // Smooth scroll down to packages section when clicking a destination card
+            const pkgSection = document.getElementById('pkg-section');
+            if (pkgSection) {
+                pkgSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
-        function openInquiryForm(destination) {
-            document.getElementById('selectedDestination').value = destination;
-            document.getElementById('modalTitle').innerText = 'Inquiry for ' + destination;
+        function openInquiryForm(packageName) {
+            document.getElementById('selectedPackage').value = packageName;
+            document.getElementById('modalTitle').innerText = packageName;
             document.getElementById('inquiryModal').style.display = 'flex';
         }
 
@@ -870,31 +919,34 @@
             document.getElementById('inquiryModal').style.display = 'none';
         }
 
-        function submitInquiry(e) {
-            e.preventDefault();
-            
-            var name = document.getElementById('custName').value;
-            var phone = document.getElementById('custPhone').value;
-            var email = document.getElementById('custEmail').value;
-            var dest = document.getElementById('selectedDestination').value;
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            const packageName = document.getElementById('selectedPackage').value;
+            const name = document.getElementById('userName').value;
+            const date = document.getElementById('travelDates').value;
+            const count = document.getElementById('travelersCount').value;
 
-            var msg = "Hello Celestia Routes!%0A%0A" +
-                      "*New Travel Inquiry*%0A" +
-                      "• *Package:* " + dest + "%0A" +
-                      "• *Name:* " + name + "%0A" +
-                      "• *WhatsApp:* " + phone + "%0A" +
-                      "• *Email:* " + email;
+            const phoneNumber = "916230413175";
+            const message = `Hello Celestia Routes! I am interested in booking/learning more about:\n\n` +
+                            `📌 *Package:* ${packageName}\n` +
+                            `👤 *Name:* ${name}\n` +
+                            `📅 *Travel Date:* ${date}\n` +
+                            `👥 *Travelers:* ${count}\n\n` +
+                            `Please send me complete details and pricing.`;
 
-            window.open("https://wa.me/916230413175?text=" + msg, "_blank");
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
             closeInquiryForm();
         }
 
+        // Close modal when clicking outside box
         window.onclick = function(event) {
-            var modal = document.getElementById('inquiryModal');
-            if (event.target == modal) {
+            const modal = document.getElementById('inquiryModal');
+            if (event.target === modal) {
                 closeInquiryForm();
             }
         }
     </script>
 </body>
+
 </html>
