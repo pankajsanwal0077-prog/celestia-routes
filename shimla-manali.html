@@ -51,9 +51,8 @@
             color: var(--brand-gold);
         }
 
-        /* Hero Section with High-Quality Background Image */
+        /* Hero Section */
         .hero-lp {
-            /* Replace with your exact GitHub image path if needed e.g. url('Image/hero-bg.jpg') */
             background: linear-gradient(rgba(15, 43, 72, 0.72), rgba(15, 43, 72, 0.85)), 
                         url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
             color: #fff;
@@ -93,11 +92,12 @@
         .feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--brand-navy); }
         .feature-item span { color: var(--brand-gold); font-size: 18px; }
 
+        /* Updated Itinerary Styling */
         .itin-box { max-width: 800px; margin: 0 auto 100px; padding: 0 20px; }
         .itin-box h2 { text-align: center; color: var(--brand-navy); margin-bottom: 25px; }
         .day-card { background: #fff; padding: 18px; border-radius: 10px; margin-bottom: 12px; border-left: 4px solid var(--brand-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
         .day-card h4 { margin: 0 0 6px 0; color: var(--brand-navy); font-size: 16px; }
-        .day-card p { margin: 0; font-size: 13px; color: #475569; }
+        .day-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.5; }
 
         .sticky-bar {
             position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff;
@@ -110,7 +110,7 @@
 </head>
 <body>
 
-    <!-- Professional Header -->
+    <!-- Header Section -->
     <header class="lp-header">
         <div class="logo-container">
             <img src="Image/logo.png" alt="Celestia Routes Logo" onerror="this.src='https://via.placeholder.com/40/0F2B48/FFFFFF?text=CR'">
@@ -123,7 +123,7 @@
         <div class="hero-text">
             <span class="price-badge">BEST SELLER • 6 DAYS / 5 NIGHTS</span>
             <h1>Magical Shimla & Manali Tour Package</h1>
-            <p>Explore Mall Road, Kufri, Solang Valley Adventure, Atal Tunnel & Sissu with Private Cab, Deluxe Hotels, and Meals Included.</p>
+            <p>Explore Kufri, Mall Road, Solang Valley Adventure, Hadimba Temple & Beas River with Private Cab, Deluxe Hotels, and Meals Included.</p>
         </div>
 
         <div class="hero-form">
@@ -154,28 +154,28 @@
         </div>
     </div>
 
-    <!-- Itinerary Summary -->
+    <!-- Updated Itinerary Section -->
     <div class="itin-box">
         <h2>Trip Itinerary Summary</h2>
         <div class="day-card">
-            <h4>Day 1: Arrival & Shimla Transfer</h4>
-            <p>Pick up from Delhi/Chandigarh, drive to Shimla. Evening free to explore Mall Road & Ridge Ground.</p>
+            <h4>Day 1: Arrival & Drive to Shimla</h4>
+            <p>On arrival at Delhi Airport/Railway Station, you will be met, assisted, and driven to Shimla—the former summer capital of British India.</p>
         </div>
         <div class="day-card">
-            <h4>Day 2: Shimla & Kufri Sightseeing</h4>
-            <p>Visit Kufri Fun World, Green Valley, Jakhoo Temple, and Historic Christ Church.</p>
+            <h4>Day 2: Kufri Excursion & Shimla Local Sightseeing</h4>
+            <p>Post breakfast, proceed for an excursion to the green valleys of Kufri (Winter Sports Capital, Himalayan Zoo). Afternoon visit Christ Church, Jakhu Temple (via ropeway), Gaiety Theatre, Scandal Point, Lakkar Bazaar, and Mall Road.</p>
         </div>
         <div class="day-card">
             <h4>Day 3: Shimla to Manali via Kullu Valley</h4>
-            <p>Scenic drive to Manali. Enroute visit Pandoh Dam, Hanogi Temple, and Kullu Rafting Point.</p>
+            <p>Morning drive from Shimla to Manali (approx. 8–9 hours journey). En-route pass through Pandoh Dam, Beas River, and Kullu Valley.</p>
         </div>
         <div class="day-card">
-            <h4>Day 4: Manali Local Sightseeing</h4>
-            <p>Visit Hadimba Temple, Vashisht Hot Springs, Club House, and Old Manali Cafe Hopping.</p>
+            <h4>Day 4: Solang Valley Excursion</h4>
+            <p>Proceed for a day excursion to Solang Valley—a splendid valley offering breathtaking views of glaciers and snow-capped peaks.</p>
         </div>
         <div class="day-card">
-            <h4>Day 5: Solang Valley & Atal Tunnel / Sissu</h4>
-            <p>Full day adventure trip to Solang Valley (Paragliding/Skiing) & drive through engineering marvel Atal Tunnel to Sissu, Lahaul.</p>
+            <h4>Day 5: Manali Local Sightseeing</h4>
+            <p>Visit Vashisht Hot Water Springs and Temple, Hidimba Temple, Tibetan Monastery, Club House, Van Vihar, and Manali Mall Road.</p>
         </div>
         <div class="day-card">
             <h4>Day 6: Departure</h4>
