@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimla Manali 6D/5N Tour Package | Celestia Routes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-navy: #0F2B48;
+            --brand-gold: #C8922A;
+            --brand-gold-light: #FAF4E8;
+            --green: #25D366;
+        }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f8fafc; color: #1e293b; }
+        
+        /* Minimal Header (No Navigation Menu) */
+        .lp-header { background: var(--brand-navy); padding: 15px 20px; text-align: center; }
+        .lp-header img { height: 42px; }
+
+        /* Hero Section */
+        .hero-lp {
+            background: linear-gradient(rgba(15,43,72,0.85), rgba(15,43,72,0.85)), url('Image/manali.jpg') center/cover;
+            color: #fff;
+            padding: 40px 20px 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .hero-text { max-width: 520px; }
+        .hero-text h1 { font-size: 30px; margin-bottom: 12px; color: #fff; line-height: 1.3; }
+        .hero-text p { font-size: 15px; color: #cbd5e1; line-height: 1.6; }
+        .price-badge { background: var(--brand-gold); color: #fff; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 13px; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
+
+        /* Quick Inquiry Form */
+        .hero-form {
+            background: #ffffff;
+            padding: 28px 24px;
+            border-radius: 14px;
+            color: #333;
+            width: 100%;
+            max-width: 360px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+            border-top: 5px solid var(--brand-gold);
+            box-sizing: border-box;
+        }
+        .hero-form h3 { margin: 0 0 5px 0; color: var(--brand-navy); font-size: 20px; text-align: center; }
+        .hero-form p { text-align: center; font-size: 12px; color: #64748b; margin-bottom: 18px; }
+        .form-control { width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 14px; outline: none; }
+        .form-control:focus { border-color: var(--brand-gold); }
+        .btn-submit { width: 100%; background: var(--green); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background: #1eb954; }
+
+        /* Highlights Section */
+        .section-box { max-width: 900px; margin: -30px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+        .features-grid { background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+        .feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--brand-navy); }
+        .feature-item span { color: var(--brand-gold); font-size: 18px; }
+
+        /* Itinerary Section */
+        .itin-box { max-width: 800px; margin: 0 auto 100px; padding: 0 20px; }
+        .itin-box h2 { text-align: center; color: var(--brand-navy); margin-bottom: 25px; }
+        .day-card { background: #fff; padding: 18px; border-radius: 10px; margin-bottom: 12px; border-left: 4px solid var(--brand-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+        .day-card h4 { margin: 0 0 6px 0; color: var(--brand-navy); font-size: 16px; }
+        .day-card p { margin: 0; font-size: 13px; color: #475569; }
+
+        /* Mobile Sticky Bottom Bar */
+        .sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff;
+            border-top: 1px solid #e2e8f0; padding: 12px 20px; display: flex;
+            justify-content: space-between; align-items: center; box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+            box-sizing: border-box; z-index: 999;
+        }
+        .sticky-btn { background: var(--green); color: #fff; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Header -->
+    <header class="lp-header">
+        <img src="Image/logo.png" alt="Celestia Routes">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-lp">
+        <div class="hero-text">
+            <span class="price-badge">BEST SELLER • 6 DAYS / 5 NIGHTS</span>
+            <h1>Magical Shimla & Manali Tour Package</h1>
+            <p>Explore Mall Road, Kufri, Solang Valley Adventure, Atal Tunnel & Sissu with Private Cab, Deluxe Hotels, and Meals Included.</p>
+        </div>
+
+        <div class="hero-form">
+            <h3>Get Custom Quote</h3>
+            <p>Fill form & receive instant itinerary on WhatsApp</p>
+            <form onsubmit="sendLpInquiry(event)">
+                <input type="text" id="lpName" placeholder="Your Full Name *" class="form-control" required>
+                <input type="tel" id="lpPhone" placeholder="WhatsApp Number *" class="form-control" required>
+                <input type="date" id="lpDate" class="form-control" required>
+                <button type="submit" class="btn-submit">Get Price & Itinerary</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Package Features Bar -->
+    <div class="section-box">
+        <div class="features-grid">
+            <div class="feature-item"><span>✔</span> Pickup & Drop (Delhi/Chd)</div>
+            <div class="feature-item"><span>✔</span> 3★ / 4★ Verified Stays</div>
+            <div class="feature-item"><span>✔</span> Daily Breakfast & Dinner</div>
+            <div class="feature-item"><span>✔</span> Private Sightseeing Cab</div>
+        </div>
+    </div>
+
+    <!-- Short Day-Wise Itinerary -->
+    <div class="itin-box">
+        <h2>Trip Itinerary Summary</h2>
+        <div class="day-card">
+            <h4>Day 1: Arrival & Shimla Transfer</h4>
+            <p>Pick up from Delhi/Chandigarh, drive to Shimla. Evening free to explore Mall Road & Ridge Ground.</p>
+        </div>
+        <div class="day-card">
+            <h4>Day 2: Shimla & Kufri Sightseeing</h4>
+            <p>Visit Kufri Fun World, Green Valley, Jakhoo Temple, and Historic Christ Church.</p>
+        </div>
+        <div class="day-card">
+            <h4>Day 3: Shimla to Manali via Kullu Valley</h4>
+            <p>Scenic drive to Manali. Enroute visit Pandoh Dam, Hanogi Temple, and Kullu Rafting Point.</p>
+        </div>
+        <div class="day-card">
+            <h4>Day 4: Manali Local Sightseeing</h4>
+            <p>Visit Hadimba Temple, Vashisht Hot Springs, Club House, and Old Manali Cafe Hopping.</p>
+        </div>
+        <div class="day-card">
+            <h4>Day 5: Solang Valley & Atal Tunnel / Sissu</h4>
+            <p>Full day adventure trip to Solang Valley (Paragliding/Skiing) & drive through engineering marvel Atal Tunnel to Sissu, Lahaul.</p>
+        </div>
+        <div class="day-card">
+            <h4>Day 6: Departure</h4>
+            <p>Check out from Manali hotel and proceed back to Chandigarh/Delhi with fond memories.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky WhatsApp Action -->
+    <div class="sticky-bar">
+        <div>
+            <span style="font-size: 11px; color: #64748b; display: block;">Shimla Manali 6D/5N</span>
+            <strong style="color: var(--brand-navy); font-size: 15px;">Customized Deals Available</strong>
+        </div>
+        <a href="https://wa.me/916230413175?text=Hi%20Celestia%20Routes,%20I%20am%20interested%20in%20Shimla%20Manali%206D/5N%20Package" class="sticky-btn" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <script>
+        function sendLpInquiry(e) {
+            e.preventDefault();
+            var name = document.getElementById('lpName').value;
+            var phone = document.getElementById('lpPhone').value;
+            var date = document.getElementById('lpDate').value;
+            
+            var msg = "Hello Celestia Routes!%0A%0A" +
+                      "*Shimla Manali (6D/5N) Landing Page Inquiry*%0A" +
+                      "• *Name:* " + name + "%0A" +
+                      "• *WhatsApp:* " + phone + "%0A" +
+                      "• *Travel Date:* " + date;
+
+            window.open("https://wa.me/916230413175?text=" + msg, "_blank");
+        }
+    </script>
+</body>
+</html>
