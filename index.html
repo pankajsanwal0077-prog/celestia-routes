@@ -19,11 +19,20 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Modern Travel Tribes Style Layout CSS -->
+    <!-- Brand Color Custom Styling -->
     <style>
+        :root {
+            --brand-navy: #0F2B48;
+            --brand-navy-dark: #0A1E35;
+            --brand-gold: #C8922A;
+            --brand-gold-hover: #B07E1E;
+            --brand-gold-light: #FAF4E8;
+            --bg-light: #F8FAFC;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8fafc;
+            background-color: var(--bg-light);
             color: #1e293b;
             margin: 0;
             padding: 0;
@@ -44,7 +53,7 @@
             height: 260px;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(15, 43, 72, 0.12);
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-size: cover;
@@ -53,13 +62,13 @@
 
         .dest-hero-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(15, 43, 72, 0.25);
         }
 
         .dest-card-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+            background: linear-gradient(180deg, rgba(15, 43, 72, 0.15) 0%, rgba(10, 30, 53, 0.9) 100%);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -69,13 +78,14 @@
 
         .dest-tag {
             align-self: flex-start;
-            background: rgba(255, 255, 255, 0.9);
-            color: #0f172a;
+            background: var(--brand-gold);
+            color: #ffffff;
             font-size: 10px;
             font-weight: 700;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .dest-info h3 {
@@ -95,9 +105,9 @@
             position: absolute;
             bottom: 20px;
             right: 20px;
-            width: 32px;
-            height: 32px;
-            background: #ff5722;
+            width: 34px;
+            height: 34px;
+            background: var(--brand-gold);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -105,6 +115,12 @@
             justify-content: center;
             font-size: 16px;
             font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .dest-hero-card:hover .dest-arrow {
+            background: #ffffff;
+            color: var(--brand-navy);
         }
 
         /* Filter Pills Tabs */
@@ -124,15 +140,15 @@
             border-radius: 30px;
             font-size: 14px;
             font-weight: 600;
-            color: #475569;
+            color: var(--brand-navy);
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: #0f172a;
-            color: #ffffff;
-            border-color: #0f172a;
+            background: var(--brand-navy);
+            color: var(--brand-gold);
+            border-color: var(--brand-navy);
         }
 
         /* Packages Grid */
@@ -149,16 +165,17 @@
             background: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 20px rgba(15, 43, 72, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            border: 1px solid #f1f5f9;
+            border: 1px solid #e2e8f0;
         }
 
         .pkg-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 30px rgba(15, 43, 72, 0.16);
+            border-color: var(--brand-gold);
         }
 
         .pkg-img-box {
@@ -178,31 +195,32 @@
         }
 
         .badge-pill {
-            background: #ff5722;
-            color: #ffffff;
+            background: var(--brand-navy);
+            color: var(--brand-gold);
             font-size: 10px;
             font-weight: 700;
-            padding: 4px 8px;
+            padding: 4px 10px;
             border-radius: 4px;
             text-transform: uppercase;
         }
 
-        .badge-pill.white {
-            background: #ffffff;
-            color: #0f172a;
+        .badge-pill.gold {
+            background: var(--brand-gold);
+            color: #ffffff;
         }
 
         .pkg-duration {
             position: absolute;
             bottom: 12px;
             left: 12px;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(10, 30, 53, 0.85);
             color: #ffffff;
             font-size: 11px;
             font-weight: 600;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             backdrop-filter: blur(4px);
+            border: 1px solid rgba(200, 146, 42, 0.3);
         }
 
         .pkg-body {
@@ -215,13 +233,13 @@
         .pkg-title {
             font-size: 18px;
             font-weight: 700;
-            color: #0f172a;
+            color: var(--brand-navy);
             margin: 0 0 6px 0;
         }
 
         .pkg-location {
             font-size: 12px;
-            color: #ff5722;
+            color: var(--brand-gold);
             font-weight: 600;
             margin-bottom: 12px;
         }
@@ -234,12 +252,13 @@
         }
 
         .highlight-tag {
-            background: #f1f5f9;
-            color: #475569;
+            background: var(--brand-gold-light);
+            color: var(--brand-navy);
             font-size: 11px;
             font-weight: 500;
-            padding: 4px 8px;
+            padding: 4px 10px;
             border-radius: 6px;
+            border: 1px solid rgba(200, 146, 42, 0.2);
         }
 
         .pkg-footer {
@@ -252,21 +271,28 @@
         }
 
         .view-btn {
-            background: #ff5722;
-            color: #ffffff;
-            border: none;
+            background: var(--brand-navy);
+            color: var(--brand-gold);
+            border: 1px solid var(--brand-gold);
             padding: 10px 20px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 700;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: all 0.2s ease;
             width: 100%;
             text-align: center;
         }
 
         .view-btn:hover {
-            background: #e64a19;
+            background: var(--brand-gold);
+            color: #ffffff;
+            border-color: var(--brand-gold);
+        }
+
+        /* Footer Custom Styling */
+        .footer-section {
+            background: var(--brand-navy-dark) !important;
         }
 
         /* Modal Overlay Styling */
@@ -277,7 +303,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.65);
+            background: rgba(10, 30, 53, 0.75);
             backdrop-filter: blur(4px);
             z-index: 1000;
             justify-content: center;
@@ -290,10 +316,11 @@
             border-radius: 16px;
             width: 90%;
             max-width: 400px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 20px 40px rgba(10, 30, 53, 0.3);
             position: relative;
             font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
+            border-top: 4px solid var(--brand-gold);
         }
 
         .close-btn {
@@ -315,8 +342,8 @@
         }
 
         .close-btn:hover {
-            background: #e2e8f0;
-            color: #0f172a;
+            background: var(--brand-gold-light);
+            color: var(--brand-navy);
             transform: rotate(90deg);
         }
 
@@ -328,7 +355,7 @@
             display: block;
             font-size: 13px;
             font-weight: 600;
-            color: #334155;
+            color: var(--brand-navy);
             margin-bottom: 6px;
         }
 
@@ -340,6 +367,10 @@
             font-size: 14px;
             box-sizing: border-box;
             outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--brand-gold);
         }
 
         .submit-btn {
@@ -359,31 +390,31 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="background: var(--brand-navy);">
         <div class="logo">
             <img src="Image/logo.png" alt="Celestia Routes Logo" style="height: 45px; vertical-align: middle;">
             <div style="display: inline-block; vertical-align: middle; margin-left: 12px;">
-                <span style="display: block; font-weight: bold; font-size: 20px; font-family: Arial, sans-serif;">Celestia Routes</span>
-                <span class="logo-tagline" style="display: block; font-family: 'Caveat', cursive; font-size: 18px; color: #555; margin-top: -3px;">Where journeys become stories</span>
+                <span style="display: block; font-weight: bold; font-size: 20px; color: #ffffff; font-family: Arial, sans-serif;">Celestia Routes</span>
+                <span class="logo-tagline" style="display: block; font-family: 'Caveat', cursive; font-size: 18px; color: var(--brand-gold); margin-top: -3px;">Where journeys become stories</span>
             </div>
         </div>
         
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" style="color: #ffffff;">Home</a></li>
+            <li><a href="#destinations" style="color: #ffffff;">Destinations</a></li>
+            <li><a href="#contact" style="color: #ffffff;">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" style="background: linear-gradient(rgba(10,30,53,0.65), rgba(10,30,53,0.75)), url('Image/manali.jpg') center/cover;">
         <div class="hero-content">
-            <p class="hero-tagline">TRAVEL • EXPLORE • EXPERIENCE</p>
-            <h1>Explore Beyond Horizons</h1>
+            <p class="hero-tagline" style="color: var(--brand-gold); letter-spacing: 2px;">TRAVEL • EXPLORE • EXPERIENCE</p>
+            <h1 style="color: #ffffff;">Explore Beyond Horizons</h1>
             <p class="hero-subtitle">Curating extraordinary journeys through Himachal, Kashmir, Ladakh & Spiti.</p>
             <div class="hero-buttons">
-                <a href="#destinations" class="btn primary-btn">Explore Packages</a>
-                <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn">Plan My Trip</a>
+                <a href="#destinations" class="btn primary-btn" style="background: var(--brand-gold); color: #ffffff;">Explore Packages</a>
+                <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn" style="border-color: var(--brand-gold); color: #ffffff;">Plan My Trip</a>
             </div>
         </div>
     </section>
@@ -391,8 +422,8 @@
     <!-- Main Active Destinations Section -->
     <section id="destinations">
         <div class="section-heading" style="text-align: center; margin-top: 40px;">
-            <p class="small-title">POPULAR DESTINATIONS</p>
-            <h2>Choose Your Destination</h2>
+            <p class="small-title" style="color: var(--brand-gold); font-weight: 700; letter-spacing: 1.5px;">POPULAR DESTINATIONS</p>
+            <h2 style="color: var(--brand-navy);">Choose Your Destination</h2>
             <p>Click on any region to filter itineraries below</p>
         </div>
 
@@ -464,7 +495,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/manali.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">HIMACHAL</span>
-                    <span class="badge-pill white">FAMILY</span>
+                    <span class="badge-pill gold">FAMILY</span>
                 </div>
                 <span class="pkg-duration">⏱ 6D / 5N</span>
             </div>
@@ -486,7 +517,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/kasol.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">HIMACHAL</span>
-                    <span class="badge-pill white">ADVENTURE</span>
+                    <span class="badge-pill gold">ADVENTURE</span>
                 </div>
                 <span class="pkg-duration">⏱ 5D / 4N</span>
             </div>
@@ -508,7 +539,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/shimla.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">HIMACHAL</span>
-                    <span class="badge-pill white">WEEKEND</span>
+                    <span class="badge-pill gold">WEEKEND</span>
                 </div>
                 <span class="pkg-duration">⏱ 4D / 3N</span>
             </div>
@@ -531,7 +562,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/srinagar.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">KASHMIR</span>
-                    <span class="badge-pill white">FAMILY</span>
+                    <span class="badge-pill gold">FAMILY</span>
                 </div>
                 <span class="pkg-duration">⏱ 6D / 5N</span>
             </div>
@@ -553,7 +584,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/gulmarg.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">KASHMIR</span>
-                    <span class="badge-pill white">BUDGET</span>
+                    <span class="badge-pill gold">BUDGET</span>
                 </div>
                 <span class="pkg-duration">⏱ 5D / 4N</span>
             </div>
@@ -575,7 +606,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/pahalgam.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">KASHMIR</span>
-                    <span class="badge-pill white">HONEYMOON</span>
+                    <span class="badge-pill gold">HONEYMOON</span>
                 </div>
                 <span class="pkg-duration">⏱ 6D / 5N</span>
             </div>
@@ -598,7 +629,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/kaza.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">SPITI VALLEY</span>
-                    <span class="badge-pill white">WINTER</span>
+                    <span class="badge-pill gold">WINTER</span>
                 </div>
                 <span class="pkg-duration">⏱ 8D / 7N</span>
             </div>
@@ -620,7 +651,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/chandratal.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">SPITI VALLEY</span>
-                    <span class="badge-pill white">EXPLORER</span>
+                    <span class="badge-pill gold">EXPLORER</span>
                 </div>
                 <span class="pkg-duration">⏱ 9D / 8N</span>
             </div>
@@ -642,7 +673,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/tabo.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">SPITI VALLEY</span>
-                    <span class="badge-pill white">WEEKEND</span>
+                    <span class="badge-pill gold">WEEKEND</span>
                 </div>
                 <span class="pkg-duration">⏱ 6D / 5N</span>
             </div>
@@ -665,7 +696,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/leh.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">LEH LADAKH</span>
-                    <span class="badge-pill white">FAMILY</span>
+                    <span class="badge-pill gold">FAMILY</span>
                 </div>
                 <span class="pkg-duration">⏱ 6D / 5N</span>
             </div>
@@ -687,7 +718,7 @@
             <div class="pkg-img-box" style="background-image: url('Image/pangong.jpg');">
                 <div class="pkg-badges">
                     <span class="badge-pill">LEH LADAKH</span>
-                    <span class="badge-pill white">EXPLORER</span>
+                    <span class="badge-pill gold">EXPLORER</span>
                 </div>
                 <span class="pkg-duration">⏱ 7D / 6N</span>
             </div>
@@ -730,10 +761,10 @@
     <footer class="footer-section" id="contact">
         <div class="footer-container">
             <div class="footer-offices">
-                <span class="footer-badge">REGISTERED OFFICE</span>
-                <h3>Get In Touch With Us</h3>
+                <span class="footer-badge" style="background: var(--brand-gold); color: #ffffff;">REGISTERED OFFICE</span>
+                <h3 style="color: #ffffff;">Get In Touch With Us</h3>
                 
-                <div class="office-main-card">
+                <div class="office-main-card" style="border-left: 4px solid var(--brand-gold);">
                     <h4>Celestia Routes</h4>
                     <p class="office-address">
                         Near Kais Gompa / Kukdiser, Kais,<br>
@@ -748,7 +779,7 @@
 
             <div class="footer-info">
                 <div class="footer-social-box">
-                    <h3>Follow Our Trails</h3>
+                    <h3 style="color: #ffffff;">Follow Our Trails</h3>
                     <p class="social-subtitle">Join our community of mountain explorers and check out our daily expedition stories.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/share/1ME4AEDmze/" target="_blank" class="social-icon" title="Facebook">f</a>
@@ -758,13 +789,13 @@
                 </div>
 
                 <div class="footer-quick-note">
-                    <h3>Ready for an Adventure?</h3>
+                    <h3 style="color: #ffffff;">Ready for an Adventure?</h3>
                     <p>Drop us a message anytime. Our local experts from Kullu are always here to design your custom itinerary.</p>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="border-top: 1px solid rgba(200, 146, 42, 0.2);">
             <p>© 2026 Celestia Routes. All Rights Reserved. Crafted with passion.</p>
         </div>
     </footer>
@@ -779,7 +810,7 @@
     <div class="modal-overlay" id="inquiryModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeInquiryForm()" title="Close">&times;</span>
-            <h3 id="modalTitle">Plan Your Trip</h3>
+            <h3 id="modalTitle" style="color: var(--brand-navy);">Plan Your Trip</h3>
             <p style="text-align: center; font-size: 13px; color: #64748b; margin-bottom: 20px;">Fill in your details and our team will contact you shortly.</p>
             
             <form onsubmit="submitInquiry(event)">
@@ -808,7 +839,6 @@
     <!-- Interactive Filtering & Modal Logic -->
     <script>
         function filterCategory(cat) {
-            // Update Active Pill Buttons
             var buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
@@ -818,7 +848,6 @@
             else if(cat === 'spiti') document.getElementById('btn-spiti').classList.add('active');
             else if(cat === 'ladakh') document.getElementById('btn-ladakh').classList.add('active');
 
-            // Show/Hide Package Cards
             var cards = document.querySelectorAll('.pkg-card');
             cards.forEach(card => {
                 if(cat === 'all' || card.getAttribute('data-category') === cat) {
@@ -828,7 +857,6 @@
                 }
             });
 
-            // Smooth Scroll down to package cards
             document.getElementById('pkg-section').scrollIntoView({ behavior: 'smooth' });
         }
 
