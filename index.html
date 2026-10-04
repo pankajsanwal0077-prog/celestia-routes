@@ -18,6 +18,101 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Modal Popup Styling -->
+    <style>
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+            font-family: Arial, sans-serif;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .modal-box h3 {
+            margin-top: 0;
+            color: #1a252f;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .modal-box p {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #1eb856;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +141,7 @@
             <p class="hero-subtitle">Curating extraordinary journeys through the majestic landscapes of India.</p>
             <div class="hero-buttons">
                 <a href="#destinations" class="btn primary-btn">Explore Packages</a>
-                <a href="#contact" class="btn secondary-btn">Plan My Trip</a>
+                <a href="javascript:void(0)" onclick="openInquiryForm('Custom Trip')" class="btn secondary-btn">Plan My Trip</a>
             </div>
         </div>
     </section>
@@ -87,7 +182,7 @@
                 <div class="card-content">
                     <h3>Manali</h3>
                     <p>Mountains, rivers and unforgettable adventures.</p>
-                    <a href="#">Explore →</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Manali Tour Package')">Explore →</a>
                 </div>
             </div>
 
@@ -97,7 +192,7 @@
                 <div class="card-content">
                     <h3>Shimla</h3>
                     <p>Colonial charm, beautiful views and peaceful escapes.</p>
-                    <a href="#">Explore →</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Shimla Tour Package')">Explore →</a>
                 </div>
             </div>
 
@@ -107,7 +202,7 @@
                 <div class="card-content">
                     <h3>Jibhi</h3>
                     <p>A quiet Himalayan escape surrounded by nature.</p>
-                    <a href="#">Explore →</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Jibhi Tour Package')">Explore →</a>
                 </div>
             </div>
 
@@ -117,7 +212,7 @@
                 <div class="card-content">
                     <h3>Kasol</h3>
                     <p>Riverside vibes, valleys and mountain adventures.</p>
-                    <a href="#">Explore →</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Kasol Tour Package')">Explore →</a>
                 </div>
             </div>
         </div>
@@ -136,7 +231,7 @@
                 <div class="card-content">
                     <h3>Kaza</h3>
                     <p>The vibrant heart of Spiti, surrounded by barren mountains.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Kaza Spiti Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -145,7 +240,7 @@
                 <div class="card-content">
                     <h3>Chandratal Lake</h3>
                     <p>Stunning high-altitude crescent lake with crystal clear water.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Chandratal Lake Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -154,7 +249,7 @@
                 <div class="card-content">
                     <h3>Key Monastery</h3>
                     <p>Famous Tibetan Buddhist monastery perched high on a hill.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Key Monastery Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -163,7 +258,7 @@
                 <div class="card-content">
                     <h3>Tabo</h3>
                     <p>Ancient caves, historic mud-brick monastery and rich heritage.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Tabo Spiti Package')">Explore &rarr;</a>
                 </div>
             </div>
         </div>
@@ -182,7 +277,7 @@
                 <div class="card-content">
                     <h3>Rishikesh</h3>
                     <p>Yoga capital, thrilling river rafting and spiritual peace.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Rishikesh Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -191,7 +286,7 @@
                 <div class="card-content">
                     <h3>Nainital</h3>
                     <p>Sparkling lakes, scenic viewpoints and pleasant colonial charm.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Nainital Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -200,7 +295,7 @@
                 <div class="card-content">
                     <h3>Jim Corbett</h3>
                     <p>Thrilling wildlife safaris, dense jungle trails and majestic tigers.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Jim Corbett Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -209,7 +304,7 @@
                 <div class="card-content">
                     <h3>Mussoorie</h3>
                     <p>Queen of the hills, cascading waterfalls and romantic sunsets.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Mussoorie Package')">Explore &rarr;</a>
                 </div>
             </div>
         </div>
@@ -228,7 +323,7 @@
                 <div class="card-content">
                     <h3>Leh</h3>
                     <p>Ancient Buddhist monasteries, vibrant markets and rugged terrain.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Leh Ladakh Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -237,7 +332,7 @@
                 <div class="card-content">
                     <h3>Pangong Lake</h3>
                     <p>Color-changing deep blue waters framed by stark mountains.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Pangong Lake Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -246,7 +341,7 @@
                 <div class="card-content">
                     <h3>Nubra Valley</h3>
                     <p>Double-humped camels, sand dunes and lush river oases.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Nubra Valley Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -255,7 +350,7 @@
                 <div class="card-content">
                     <h3>Kargil</h3>
                     <p>Historic mountain trails, dramatic valleys and rich heritage.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Kargil Package')">Explore &rarr;</a>
                 </div>
             </div>
         </div>
@@ -274,7 +369,7 @@
                 <div class="card-content">
                     <h3>Srinagar</h3>
                     <p>Serene Dal Lake, traditional houseboats and royal Mughal gardens.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Srinagar Kashmir Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -283,7 +378,7 @@
                 <div class="card-content">
                     <h3>Gulmarg</h3>
                     <p>Powder snow, thrilling skiing slopes and high-altitude gondola rides.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Gulmarg Ski Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -292,7 +387,7 @@
                 <div class="card-content">
                     <h3>Pahalgam</h3>
                     <p>Dappled pine forests, gushing streams and picturesque valleys.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Pahalgam Package')">Explore &rarr;</a>
                 </div>
             </div>
 
@@ -301,7 +396,7 @@
                 <div class="card-content">
                     <h3>Sonamarg</h3>
                     <p>Glacial passes, golden meadows and majestic snow-clad peaks.</p>
-                    <a href="#">Explore &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openInquiryForm('Sonamarg Package')">Explore &rarr;</a>
                 </div>
             </div>
         </div>
@@ -359,7 +454,7 @@
                     </p>
                     <div class="office-contacts-list">
                         <p>📞 +91 62304 13175 / +91 78074 25363</p>
-                        <p>✉️ celestiaroutes@gmail.com</p>
+                        <p>✉️️ celestiaroutes@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -392,5 +487,75 @@
         <span>Need Help? <strong>Chat with us</strong></span>
         <div class="whatsapp-icon">💬</div>
     </a>
+
+    <!-- Interactive Landing Modal Form -->
+    <div class="modal-overlay" id="inquiryModal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeInquiryForm()">&times;</span>
+            <h3 id="modalTitle">Plan Your Trip</h3>
+            <p>Fill in your details and our Kullu experts will contact you shortly.</p>
+            
+            <form onsubmit="submitInquiry(event)">
+                <input type="hidden" id="selectedDestination" value="">
+                
+                <div class="form-group">
+                    <label for="custName">Your Name *</label>
+                    <input type="text" id="custName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="custPhone">WhatsApp Number *</label>
+                    <input type="tel" id="custPhone" placeholder="Enter WhatsApp number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="custEmail">Email ID *</label>
+                    <input type="email" id="custEmail" placeholder="Enter your email address" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Form Logic -->
+    <script>
+        function openInquiryForm(destination) {
+            document.getElementById('selectedDestination').value = destination;
+            document.getElementById('modalTitle').innerText = 'Inquiry for ' + destination;
+            document.getElementById('inquiryModal').style.display = 'flex';
+        }
+
+        function closeInquiryForm() {
+            document.getElementById('inquiryModal').style.display = 'none';
+        }
+
+        function submitInquiry(e) {
+            e.preventDefault();
+            
+            var name = document.getElementById('custName').value;
+            var phone = document.getElementById('custPhone').value;
+            var email = document.getElementById('custEmail').value;
+            var dest = document.getElementById('selectedDestination').value;
+
+            var msg = "Hello Celestia Routes!%0A%0A" +
+                      "*New Travel Inquiry*%0A" +
+                      "• *Destination:* " + dest + "%0A" +
+                      "• *Name:* " + name + "%0A" +
+                      "• *WhatsApp:* " + phone + "%0A" +
+                      "• *Email:* " + email;
+
+            window.open("https://wa.me/916230413175?text=" + msg, "_blank");
+            closeInquiryForm();
+        }
+
+        // Close modal if user clicks outside of modal box
+        window.onclick = function(event) {
+            var modal = document.getElementById('inquiryModal');
+            if (event.target == modal) {
+                closeInquiryForm();
+            }
+        }
+    </script>
 </body>
 </html>
