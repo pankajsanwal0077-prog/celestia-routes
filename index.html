@@ -931,6 +931,14 @@
 
         function sendToWhatsApp(event) {
             event.preventDefault();
+
+            // Google Ads Lead Form Conversion Event Tracking
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18494817242/edAFCPa06pIDEnqHgvNE'
+                });
+            }
+
             const packageName = document.getElementById('selectedPackage').value;
             const name = document.getElementById('userName').value;
             const date = document.getElementById('travelDates').value;
