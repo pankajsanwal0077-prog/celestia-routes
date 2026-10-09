@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1849481724"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-1849481724');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shimla Manali 5N/6D Tour Package | Celestia Routes</title>
@@ -195,6 +204,11 @@
     <script>
         function sendLpInquiry(e) {
             e.preventDefault();
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-1849481724/edAFCPa06pIdENqHgvNE'
+                });
+            }
             var name = document.getElementById('lpName').value;
             var phone = document.getElementById('lpPhone').value;
             var date = document.getElementById('lpDate').value;
