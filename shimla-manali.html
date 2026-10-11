@@ -143,11 +143,7 @@
                 <input type="tel" id="lpPhone" placeholder="WhatsApp Number *" class="form-control" required>
                 <input type="date" id="lpDate" class="form-control" required>
                 <select id="lpPersons" class="form-control" required>
-                    <option value="" disabled selected>No. of Travelers *</option>
-                    <option value="2 Persons (Couple/Friends)">2 Persons (Couple/Friends)</option>
-                    <option value="Family (3-5 Persons)">Family (3-5 Persons)</option>
-                    <option value="Group (6+ Persons)">Group (6+ Persons)</option>
-                </select>
+                    <input type="number" name="travelers" placeholder="No. of Travelers (e.g. 2, 4, 8) *" min="1" max="100" required>
                 <button type="submit" class="btn-submit">Get Price & Itinerary</button>
             </form>
         </div>
